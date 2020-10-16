@@ -22,8 +22,10 @@ Content of the project folder:
 ├── .gitignore               # Git ignore file
 ├── index.html               # landing HTML file, this is what users see when you come to url
 ├── calendar.html            # calendar HTML file, this is where users go to see any upcoming events
-├── homepage.html            # homepage HTML file, this is what users see after logging in
+├── homepage.html            # homepage HTML file, this is what users see after logging
 └── README.md
+
+```
 
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
@@ -37,6 +39,7 @@ It has the following subfolders and files:
 Firebase hosting files: 
 ├── .firebaserc...
 
+```
 
 Tips for file naming files and folders:
 * use lowercase with no spaces
