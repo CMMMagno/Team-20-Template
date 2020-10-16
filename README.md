@@ -22,6 +22,7 @@ Content of the project folder:
 ├── .gitignore               # Git ignore file
 ├── index.html               # landing HTML file, this is what users see when you come to url
 ├── calendar.html            # calendar HTML file, this is where users go to see any upcoming events
+├── homepage.html            # homepage HTML file, this is what users see after logging in
 └── README.md
 
 It has the following subfolders and files:
@@ -42,4 +43,5 @@ Tips for file naming files and folders:
 * use dashes (not underscore) for word separation
 
 ## Creator
-Carl Magno
+* Carl Magno
+* kakikagatan
