@@ -13,7 +13,8 @@ Technologies used for this project:
 * JavaScript
 * Bootstrap 
 * ...
-	
+
+```
 ## Content
 Content of the project folder:
 
@@ -25,7 +26,6 @@ Content of the project folder:
 ├── homepage.html            # homepage HTML file, this is what users see after logging
 └── README.md
 
-```
 
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
@@ -38,6 +38,7 @@ It has the following subfolders and files:
 
 Firebase hosting files: 
 ├── .firebaserc...
+
 
 ```
 
