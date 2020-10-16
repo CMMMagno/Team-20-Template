@@ -17,10 +17,11 @@ Technologies used for this project:
 ## Content
 Content of the project folder:
 
-```
+
  Top level of project folder: 
 ├── .gitignore               # Git ignore file
 ├── index.html               # landing HTML file, this is what users see when you come to url
+├── calendar.html            # calendar HTML file, this is where users go to see any upcoming events
 └── README.md
 
 It has the following subfolders and files:
@@ -36,9 +37,9 @@ Firebase hosting files:
 ├── .firebaserc...
 
 
-```
-
 Tips for file naming files and folders:
 * use lowercase with no spaces
 * use dashes (not underscore) for word separation
 
+## Creator
+Carl Magno
