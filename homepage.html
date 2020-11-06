@@ -1,12 +1,96 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Homepage</title>
+    <meta charset="utf-8">
+    <title>Team 20 Project</title>
+    <meta name="comp1800 boilerplate code" content="my bcit project">
+    <meta name="author" content="BCIT">
+
+    <!-- Bootstrap for Mobile-first, and JQuery -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Optional styles and scripts of your own -->
+    <link rel="stylesheet" href="styles/Homestyle.css">
+
 </head>
+
 <body>
 
-<h1>This is our HomePage</h1>
-<p>Hope you like it!</p>
+    <!-------------------------------------->
+    <!-- The following is HTML for layout -->
+    <!-------------------------------------->
+    
+    <div id="container">
+    <!-- Header Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <a class="navbar-brand" href="">HomePage</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="calendar.html">Calendar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">My Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Sign Out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Game Preview -->
+    <div class="preview">
+        <img src="images/Icons/left-arrow.png" width="50" height="50" class="arrows">
+        <img src="images/among-us.jpg" width="450" height="300" class="game">
+        <img src="images/Icons/right-arrow.png" width="50" height="50" class="arrows">
+    </div>
+
+    <!-- Categories -->
+    <div class="categories">
+        <div class="calendar">
+        <img src="images/Icons/calendar.png" width="100" height="100"> 
+        <h3>Calendar</h3>
+        </div>
+        <div class="lobbies">
+        <img src="images/Icons/game.png" width="100" height="100"> 
+        <h3>Lobbies</h3>
+        </div>
+        <div class="users">
+        <img src="images/Icons/group.png" width="100" height="100"> 
+        <h3>Users</h3>
+        </div>
+        <div class="chat">
+        <img src="images/Icons/chat.png" width="100" height="100"> 
+        <h3>Chat Rooms</h3>
+        </div>
+    </div>
+
+
+    </div>  
+
+    <!----------------------------------------------->
+    <!-- JS: Boostrap, Firebase, API related    -->
+    <!----------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+    <!--------------------------------------------------------------------->
+    <!-- JS files: Your own JavaScript functions included here    -->
+    <!--------------------------------------------------------------------->
 
 </body>
+
 </html>
