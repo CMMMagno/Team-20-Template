@@ -5,15 +5,14 @@ body {
 /* Container */
 #container {
     display: grid;
-    grid-template-rows: 0.2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr;
     grid-template-areas: 
-    "nav"
-    "preview"
-    "categories";
+    "nav nav"
+    "preview categories";
     column-gap: 50px;
     row-gap: 50px;
     padding: 40px;
-
 }
 
 /* Nav */
@@ -25,6 +24,7 @@ body {
 /* Game Preview */
 .preview {
     grid-area: preview;
+    padding: 40px;
     margin: 0 auto;
 }
 
