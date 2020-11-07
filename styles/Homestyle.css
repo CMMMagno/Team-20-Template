@@ -57,22 +57,30 @@ body {
 
 .calendar {
     grid-area: calendar;
+    background-color: white;
+    opacity: 50%;
     padding: 10px;
 }
 
 .lobbies {
     grid-area: lobbies;
+    background-color: white;
+    opacity: 50%;
     padding: 10px;
 }
 
 .users {
     grid-area: users;
+    background-color: white;
+    opacity: 50%;
     padding: 10px;
 
 }
 
 .chat {
     grid-area: chat;
+    background-color: white;
+    opacity: 50%;
     padding: 10px;
 
 }
