@@ -1,18 +1,24 @@
 body {
-    background-image: url("../images/background.jpg");
+    min-height: 100vh;
+    display: flex;
+    background-color: #68b0ab;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Container */
 #container {
+
+    height: 1020px;
+    width: 480px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.2fr 1fr;
+    grid-template-rows: 0.5fr 2fr 3fr;
     grid-template-areas: 
-    "nav nav"
-    "preview categories";
-    column-gap: 50px;
-    row-gap: 50px;
-    padding: 40px;
+    "nav"
+    "preview" 
+    "categories";
+    row-gap: 20px;
+    padding: 30px;
 }
 
 /* Nav */
@@ -24,11 +30,13 @@ body {
 /* Game Preview */
 .preview {
     grid-area: preview;
-    padding: 40px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
 }
 
-.game > img {
+.preview > img {
     border: 1px solid white;
     border-radius: 10px;
 }
@@ -41,11 +49,12 @@ body {
 .categories {
     grid-area: categories;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
-    "calendar lobbies"
-    "users chat";
+    "calendar"
+    "lobbies"
+    "users"
+    "chat";
 }
 
 .categories > div {
