@@ -83,7 +83,6 @@ body {
 
 .form-inline {
   justify-content: center;
-  
 }
 
 /* Add media queries for smaller screens */
@@ -98,4 +97,10 @@ body {
 
 @media screen and (max-width: 290px) {
   .weekdays li, .days li {width: 12.2%;}
+}
+
+.table-lrg th,
+.table-lrg td,
+.table-lrg tr {
+  padding: 3rem;
 }
