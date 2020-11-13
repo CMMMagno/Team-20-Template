@@ -1,0 +1,14 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #68b0ab;
+}
+
+#container {
+    height: 1020px;
+    width: 480px;
+    display: grid;
+    border: 1px solid black;
+}
