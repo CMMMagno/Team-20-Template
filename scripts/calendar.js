@@ -52,14 +52,12 @@ function showCalendar(month, year) {
             if (i === 0 && j < firstDay) {
                 cell = document.createElement("td");
                 cellText = document.createTextNode("");
+                cell.classList.add("form-inline");
                 cell.appendChild(cellText);
                 row.appendChild(cell);
-            }
-            else if (date > daysInMonth(month, year)) {
+            } else if (date > daysInMonth(month, year)) {
                 break;
-            }
-
-            else {
+            } else {
                 cell = document.createElement("td");
                 cellText = document.createTextNode(date);
                 if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
@@ -72,6 +70,7 @@ function showCalendar(month, year) {
 
 
         }
+        row.classList.add("table-lrg");
 
         tbl.appendChild(row); // appending each row into calendar body.
     }

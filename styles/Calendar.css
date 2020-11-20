@@ -73,6 +73,18 @@ body {
   color: white !important
 }
 
+.card-header {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  justify-content: center;
+}
+
+.form-inline {
+  justify-content: center;
+}
+
 /* Add media queries for smaller screens */
 @media screen and (max-width:720px) {
   .weekdays li, .days li {width: 13.1%;}
@@ -85,4 +97,10 @@ body {
 
 @media screen and (max-width: 290px) {
   .weekdays li, .days li {width: 12.2%;}
+}
+
+.table-lrg th,
+.table-lrg td,
+.table-lrg tr {
+  padding: 3rem;
 }
