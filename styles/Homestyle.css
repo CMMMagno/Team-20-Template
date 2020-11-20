@@ -1,14 +1,15 @@
 body {
     min-height: 100vh;
     display: flex;
-    background-color: #68b0ab;
+    background-color: #34626c;
     align-items: center;
     justify-content: center;
+    margin: 0px;
+    padding: 0px;
 }
 
 /* Container */
-#container {
-
+#container { 
     height: 1020px;
     width: 480px;
     display: grid;
@@ -18,7 +19,7 @@ body {
     "preview" 
     "categories";
     row-gap: 20px;
-    padding: 30px;
+    padding: 10px;
 }
 
 /* Nav */
@@ -37,6 +38,8 @@ body {
 }
 
 .preview > img {
+    width: 350px;
+    height: 200px;
     border: 1px solid white;
     border-radius: 10px;
 }
@@ -55,41 +58,45 @@ body {
     "lobbies"
     "users"
     "chat";
+    margin: 0 auto;
 }
 
-.categories > div {
-    text-align: center;
-    border: 2px solid white;
+.categories > a  >button{
+    width: 400px;
+    height: 100px;
+    background-color: #c6b497;
+    border: 1px solid white;
     border-radius: 10px;
-    margin: 15px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
+.categories > a  >button:hover{
+    box-shadow: 0px 1px 15px #839b97;
+    color: #fff;
+    transform: translateY(-5px);
+}
 .calendar {
     grid-area: calendar;
-    background-color: white;
-    opacity: 50%;
-    padding: 10px;
+
 }
 
 .lobbies {
     grid-area: lobbies;
-    background-color: white;
-    opacity: 50%;
     padding: 10px;
 }
 
 .users {
     grid-area: users;
-    background-color: white;
-    opacity: 50%;
     padding: 10px;
-
 }
 
 .chat {
     grid-area: chat;
-    background-color: white;
-    opacity: 50%;
     padding: 10px;
-
 }

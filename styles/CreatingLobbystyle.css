@@ -4,6 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #68b0ab;
+    padding: 30px;
 }
 
 #container {
@@ -11,4 +12,6 @@ body {
     width: 480px;
     display: grid;
     border: 1px solid black;
+    grid-template-rows: 1fr 10fr;
+    padding: 10px;
 }
