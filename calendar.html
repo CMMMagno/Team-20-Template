@@ -13,6 +13,10 @@
 
     <!-- Optional styles and scripts of your own -->
     <link rel="stylesheet" href="styles/Calendar.css">
+    <link href='styles/main.css' rel='stylesheet' />
+    
+    <script src='scripts/main.js'></script>
+    <script src='scripts/day.js'></script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/VS.ico" />
@@ -39,7 +43,10 @@
     </nav>
 
     <!-- Calendar Page -->
-    <h3 class="card-header bg-light form-inline" id="monthAndYear"></h3>
+    <div id="calendar">
+
+    </div>
+    <!--<h3 class="card-header bg-light form-inline" id="monthAndYear"></h3>
     <table class="table table-bordered table-responsive-sm" id="calendar">
         <thead>
             <tr class="table-hd">
@@ -76,7 +83,8 @@
         </select>
 
 
-        <label for="year"></label><select class="form-control col-sm-4" name="year" id="year" onchange="jump()">
+        <label for="year"></label>
+        <select class="form-control col-sm-4" name="year" id="year" onchange="jump()">
             <option value=2020>2020</option>
             <option value=2021>2021</option>
             <option value=2022>2022</option>
@@ -89,14 +97,14 @@
             <option value=2029>2029</option>
             <option value=2030>2030</option>
         </select></form>
-    </div>
+    </div> 
 
     <div class="form-inline">
         <button class="btn btn-outline-primary col-sm-6 bg-light" id="previous" onclick="previous()">Previous</button>
         <button class="btn btn-outline-primary col-sm-6 bg-light" id="next" onclick="next()">Next</button>
     </div>
 
-
+    -->
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
@@ -117,7 +125,10 @@
     <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
     <script src="scripts/firebase_api_group20.js"></script>
-    <script src="scripts/calendar.js"></script>
+    <!--<script src="scripts/calendar.js"></script>-->
+
+    <script>
+    </script>
 
 </body>
 

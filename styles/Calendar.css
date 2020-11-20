@@ -113,5 +113,7 @@ th, tr, td {
 .table-lrg tr,
 .table-lrg td {
   border: 1px solid black;
-  padding: 3rem;
+  padding-bottom: 5rem;
+  vertical-align: top;
+  text-align: left;
 }

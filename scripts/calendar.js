@@ -52,7 +52,6 @@ function showCalendar(month, year) {
             if (i === 0 && j < firstDay) {
                 cell = document.createElement("td");
                 cellText = document.createTextNode("");
-                cell.classList.add("form-inline");
                 cell.appendChild(cellText);
                 row.appendChild(cell);
             } else if (date > daysInMonth(month, year)) {
