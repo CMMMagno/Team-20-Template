@@ -11,6 +11,9 @@
     <!-- Optional styles and scripts of your own -->
     <link rel="stylesheet" href="styles/CreatingLobbystyle.css">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/VS.ico" />
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
@@ -38,7 +41,22 @@
             <p id="LobbyName">Lobby Name:</p>
             <input type="textfield" id="latestNamestatus" />
             <button id="createButton">Add</button>
-            <script src="scripts/firebase_api_group20.js"></script>
+            <script src="scripts/Lobby.js"></script>
+            </div>
+
+            <div class="Game">
+                <label>Choose a Game:
+                    <input list="Games" name="myGame" /></label>
+                    <datalist id="Games">
+                      <option value="Chrome">
+                      <option value="Firefox">
+                      <option value="Internet Explorer">
+                      <option value="Opera">
+                      <option value="Safari">
+                      <option value="Microsoft Edge">
+                    </datalist>
+                <button id="createButton">Add</button>
+                <script src="scripts/Lobby.js"></script>
             </div>
             
         </section>

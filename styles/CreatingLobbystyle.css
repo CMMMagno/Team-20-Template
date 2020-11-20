@@ -3,12 +3,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #68b0ab;
+    background-color: #133b5c;
+    padding: 30px;
 }
 
 #container {
-    height: 1020px;
+    height: 920px;
     width: 480px;
     display: grid;
     border: 1px solid black;
+    grid-template-rows: 1fr 10fr;
+    padding: 10px;
 }
