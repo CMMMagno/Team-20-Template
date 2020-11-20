@@ -1,7 +1,7 @@
 body {
     min-height: 100vh;
     display: flex;
-    background-color: #34626c;
+    background-color: #133b5c;
     align-items: center;
     justify-content: center;
     margin: 0px;
@@ -46,13 +46,14 @@ body {
     border-radius: 10px;
 }
 
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
     width: auto;
     padding: 16px;
-    margin-top: -30px;
+    margin-top: -35px;
     color: white;
     font-weight: bold;
     font-size: 18px;
@@ -68,9 +69,11 @@ body {
     font-size: 15px;
     padding: 8px 12px;
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     width: 100%;
     text-align: center;
+    background-color: black;
+    opacity: 50%;
 }
 
 .numbertext {
@@ -92,7 +95,8 @@ body {
     transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
     background-color: #717171;
 }
 
@@ -112,10 +116,10 @@ body {
 .categories>a>button {
     width: 400px;
     height: 100px;
-    background-color: #c6b497;
+    background-color: #fcdab7;
     border: 1px solid white;
     border-radius: 10px;
-    color: #cfd3ce;
+    color: #495464;
     text-align: center;
     text-decoration: none;
     display: inline-block;
