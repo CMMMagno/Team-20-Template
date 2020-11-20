@@ -8,7 +8,7 @@ body {
 }
 
 #container {
-    height: 1020px;
+    height: 920px;
     width: 480px;
     display: grid;
     border: 1px solid black;

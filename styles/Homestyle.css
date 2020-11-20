@@ -9,15 +9,15 @@ body {
 }
 
 /* Container */
-#container { 
-    height: 1020px;
+#container {
+    height: 920px;
     width: 480px;
     display: grid;
     grid-template-rows: 0.5fr 2fr 3fr;
-    grid-template-areas: 
-    "nav"
-    "preview" 
-    "categories";
+    grid-template-areas:
+        "nav"
+        "preview"
+        "categories";
     row-gap: 20px;
     padding: 10px;
 }
@@ -25,6 +25,7 @@ body {
 /* Nav */
 .navbar {
     grid-area: nav;
+    color: #cfd3ce;
     align-items: center;
 }
 
@@ -34,18 +35,65 @@ body {
     display: grid;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    position: relative;
+    margin: auto;
 }
 
-.preview > img {
-    width: 350px;
-    height: 200px;
+.mySlides>img {
+    width: 400px;
+    height: 250px;
     border: 1px solid white;
     border-radius: 10px;
 }
 
-.arrows {
-    border: 0px;
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -30px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+}
+
+.next {
+    right: 0;
+}
+
+.text {
+    color: white;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
 }
 
 /* Catergories */
@@ -54,20 +102,20 @@ body {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
-    "calendar"
-    "lobbies"
-    "users"
-    "chat";
+        "calendar"
+        "lobbies"
+        "users"
+        "chat";
     margin: 0 auto;
 }
 
-.categories > a  >button{
+.categories>a>button {
     width: 400px;
     height: 100px;
     background-color: #c6b497;
     border: 1px solid white;
     border-radius: 10px;
-    color: white;
+    color: #cfd3ce;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -76,11 +124,12 @@ body {
     cursor: pointer;
 }
 
-.categories > a  >button:hover{
+.categories>a>button:hover {
     box-shadow: 0px 1px 15px #839b97;
     color: #fff;
     transform: translateY(-5px);
 }
+
 .calendar {
     grid-area: calendar;
 
