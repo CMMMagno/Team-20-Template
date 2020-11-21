@@ -13,5 +13,29 @@ body {
     display: grid;
     border: 1px solid black;
     grid-template-rows: 1fr 10fr;
+    grid-template-areas:
+    "nav"
+    "Lobby";
     padding: 10px;
+    color: white;
+}
+
+.Lobby {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "Name"
+    "Game"
+    "Amount"
+    "Create";
+    align-items: center;
+    justify-content: center;
+}
+
+.Name {
+    grid-area: Name;
+}
+
+.Game {
+    grid-area: Game;
 }

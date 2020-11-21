@@ -1,12 +1,6 @@
 <!DOCTYPE html>
-<html>
-
 <head>
-    <title>Lobbies</title>
-    <meta name="comp1800 boilerplate code" content="my bcit project">
-    <meta name="Kaki Kagatan" content="BCIT">
-
-    <!-- Bootstrap for Mobile-first, and JQuery -->
+    <title>Lobby</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
@@ -15,58 +9,31 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/VS.ico" />
-</head>
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
+</head>
 <body>
     <div id="container">
         <!-- Header Navigation Bar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-            <h1 class="navbar-brand" href="">Lobbies</h1>
+            <h1 class="navbar-brand" href="">Lobby</h1>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="homepage.html">Home</a>
+                        <a class="nav-link" href="LobbyList.html">Close</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
-        <header>
-                <div class="Sorting">
-                    <p>Sort</p>
-                </div>
-                <a href="CreatingLobby.html">
-                    <button class="Creating">
-                        <p>Create</p>
-                    </button>                       
-                </a>
-        </header>
+        <div class="Lobby">
 
-        <section>
-            <div class="L1">
-                <h3>Lobby Name</h3>
-                <p>Game: .....</p>
-            </div>
-            <div class="L2">
-                <h3>Lobby Name</h3>
-                <p>Game: .....</p>
-            </div>
-            <div class="L3">
-                <h3>Lobby Name</h3>
-                <p>Game: .....</p>
-            </div>
-            <div class="L4">
-                <h3>Lobby Name</h3>
-                <p>Game: .....</p>
-            </div>
-            <div class="L5">
-                <h3>Lobby Name</h3>
-                <p>Game: .....</p>
-            </div>
-        </section>
+        </div>
+
+    </div>
 </body>
-
-</html>
