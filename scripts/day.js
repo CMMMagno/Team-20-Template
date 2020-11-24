@@ -1,39 +1,81 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var txt;
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
-        initialView: 'dayGridMonth',
+        eventDidMount: function (info) {
+            var tooltip = new Tooltip(info.el, {
+                title: info.event.extendedProps.description,
+                placement: 'top',
+                trigger: 'hover',
+                container: 'body'
+            });
+        },
+
         selectable: true,
         dateClick: function (dateClickInfo) {
-        confirmEvent(dateClickInfo);
-    }
+            confirmEventDay(dateClickInfo);
+        },
+        headerToolbar: {
+            center: 'addEventButton',
+        },
+        customButtons: {
+            addEventButton: {
+                text: 'Add event...',
+                click: function () {
+                    confirmEventButton();
+                },
+            },
+
+        },
+
+        events: [{
+                title: 'Halloween',
+                start: '2020-11-01'
+            },
+            {
+                title: 'Christmas Eve',
+                start: '2020-12-24',
+            },
+            {
+                title: 'Christmas',
+                start: '2020-12-25',
+            },
+            {
+                title: 'Boxing Day',
+                start: '2020-12-26',
+            },
+        ],
+
+        eventColor: 'green'
     });
     calendar.render();
 });
 
-function confirmEvent(dateClickInfo) {
-    var regex = '\\d{4}-\\d{2}-\\d{2}';
+function promptEvent() {
     var r = confirm('Do you want to create an event?');
-    var eventDate;
-    if (r == true) {
-        eventDate = prompt('Enter a date in YYYY-MM-DD format:');
-        if (eventDate.match(regex) && isValidDate(eventDate)) {
-            var event = prompt('Enter the event name:');
-        } else {
-            alert('Invalid date format');
-        }
-    }
-    else {
-        alert('Cancelling event...');
+    return (r ? r : alert('Cancelling event...'));
+}
+
+function confirmEventDay(dateClickInfo) {
+    if (promptEvent()) {
+        var eventTitle = prompt('Enter event title:')
+        calendar.addEvent({
+            title: eventTitle,
+            start: dateClickInfo.date,
+        });
     }
 }
 
-function isValidDate(date) {
-    var parts = date.split("-");
-    var year = parseInt(parts[0],10);
-    var month = parseInt(parts[1],10);
-    var day = parseInt(parts[2],10);
-    var currentDate = new Date();
-    alert(currentDate.getFullYear());
+function confirmEventButton() {
+    if (promptEvent()) {
+        var eventDate = prompt('Enter event date:');
+        var date = new Date(eventDate + 'T00:00:00');
+        var eventTitle = prompt('Enter event title:');
+        if (!isNaN(date.valueOf())) {
+            calendar.addEvent({
+                title: eventTitle,
+                start: date.getDate(),
+            })
+        }
+    }
 }
