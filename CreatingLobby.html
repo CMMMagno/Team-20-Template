@@ -22,7 +22,7 @@
 <body>
     <div id="container">
         <!-- Header Navigation Bar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <nav class="navbar navbar-expand navbar-dark bg-transparent">
             <h1 class="navbar-brand" href="">Creating Lobby</h1>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
                 <span class="navbar-toggler-icon"></span>
@@ -30,37 +30,57 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="Lobby.html">Back</a>
+                        <a class="nav-link" href="LobbyList.html">Back</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
-        <section>
+        <div class="Lobby">
+
+            <!-- Lobby Name -->
             <div class="Name">
-            <p id="LobbyName">Lobby Name:</p>
-            <input type="textfield" id="latestNamestatus" />
-            <button id="createButton">Add</button>
-            <script src="scripts/Lobby.js"></script>
+                <p id="LobbyName">Lobby Name :</p>
+                <input type="textfield" id="latestNamestatus" placeholder="Name"/>
             </div>
 
+            <!-- Type of Game -->
             <div class="Game">
-                <label>Choose a Game:
-                    <input list="Games" name="myGame" /></label>
-                    <datalist id="Games">
-                      <option value="Chrome">
-                      <option value="Firefox">
-                      <option value="Internet Explorer">
-                      <option value="Opera">
-                      <option value="Safari">
-                      <option value="Microsoft Edge">
-                    </datalist>
-                <button id="createButton">Add</button>
+                <p>Choose a Game :</p>
+                <input list="Games" name="myGame" placeholder="Pick a Game"/>
+                <datalist id="Games">
+                    <option value="Jackbox">
+                    <option value="Skribblio">
+                    <option value="Among Us">
+                </datalist>
+            </div>
+
+            <div class="Amount">
+                <p>Player Limit :</p>
+                <input id=demoInput type=number min=0 max=10 placeholder="1-10">
+                <button onclick="increment()">+</button>
+                <button onclick="decrement()">-</button>
+            </div>
+
+            <!-- Create button -->
+            <div class="Create">
+                <a href="Lobby.html">
+                <button id="createButton">Create</button>
+                </a>
                 <script src="scripts/Lobby.js"></script>
             </div>
-            
-        </section>
+        </div>
     </div>
+    <script>
+        function increment() {
+            document.getElementById('demoInput').stepUp();
+        }
+
+        function decrement() {
+            document.getElementById('demoInput').stepDown();
+
+        }
+    </script>
 </body>
 
 </html>

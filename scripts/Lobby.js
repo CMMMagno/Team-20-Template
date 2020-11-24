@@ -18,7 +18,7 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 // Create the Firestore database object
-// Henceforce, any reference to the database can be made with "db"
+// Henceforce, any reference to the database can be made with "firetstore"
 const firestore = firebase.firestore();
 
 // Name
@@ -27,7 +27,8 @@ const outputHeader = document.querySelector("#LobbyName");
 const inputTextField = document.querySelector("#latestNamestatus");
 const saveButton = document.querySelector("#createButton");
 
-// Game
+const docRef = firestore.doc("Lobby/Game")
+const 
 
 saveButton.addEventListener("click", function() {
   const textToSave = inputTextField.value;
