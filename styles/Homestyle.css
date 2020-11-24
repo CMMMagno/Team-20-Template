@@ -104,12 +104,11 @@ body {
 .categories {
     grid-area: categories;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
         "calendar"
         "lobbies"
-        "users"
-        "chat";
+        "users";
     margin: 0 auto;
 }
 
@@ -136,7 +135,6 @@ body {
 
 .calendar {
     grid-area: calendar;
-
 }
 
 .lobbies {
@@ -149,23 +147,18 @@ body {
     padding: 10px;
 }
 
-.chat {
-    grid-area: chat;
-    padding: 10px;
-}
-
 /* Responsive CSS */
 @media screen and (max-width: 500px) {
 
     .form {
-      width: 95%;
+        width: 95%;
     }
-  
+
     .form .user-input {
-      width: 100%
+        width: 100%
     }
-  
+
     .form .btn {
-      width: 100%;
+        width: 100%;
     }
-  }
+}
