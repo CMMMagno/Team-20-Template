@@ -2,15 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
-        eventDidMount: function (info) {
-            var tooltip = new Tooltip(info.el, {
-                title: info.event.extendedProps.description,
-                placement: 'top',
-                trigger: 'hover',
-                container: 'body'
-            });
-        },
-
+        
         selectable: true,
         dateClick: function (dateClickInfo) {
             confirmEventDay(dateClickInfo);
@@ -28,7 +20,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
         },
 
-        events: [{
+        events: [
+            {
+                title: 'Canada Day',
+                start: '2020-07-01',
+            },
+            {
                 title: 'Halloween',
                 start: '2020-11-01'
             },
@@ -44,6 +41,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 title: 'Boxing Day',
                 start: '2020-12-26',
             },
+            {
+                title: "New Years Eve",
+                start: '2020-12-31',
+            },
+            {
+                title: 'New Year',
+                start: '2021-01-01'
+            }
         ],
 
         eventColor: 'green'
