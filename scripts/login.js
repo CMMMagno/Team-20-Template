@@ -1,28 +1,3 @@
-//---------------------------------------------------------------------
-// Your web app's Firebase configuration;
-// Specifies which firebase project your application is connected with.
-//---------------------------------------------------------------------
-
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-var firebaseConfig = {
-    apiKey: "AIzaSyAX9CCcCUrLL2NhSkknMZPnoj7WteFCyC0",
-    authDomain: "group-20-68f71.firebaseapp.com",
-    databaseURL: "https://group-20-68f71.firebaseio.com",
-    projectId: "group-20-68f71",
-    storageBucket: "group-20-68f71.appspot.com",
-    messagingSenderId: "946471654834",
-    appId: "1:946471654834:web:c1c9dbbd720692b56480ab",
-    measurementId: "G-TBS0PL8RWD"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
-// Create the Firestore database object
-// Henceforce, any reference to the database can be made with "firetstore"
-const firestore = firebase.firestore();
-
 // Initialize the FirebaseUI Widget using Firebase.
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 var uiConfig = {
@@ -41,12 +16,12 @@ var uiConfig = {
             //------------------------------------------------------------------------------------------
             var user = authResult.user;
             if (authResult.additionalUserInfo.isNewUser) {
-                db.collection("Users").doc(User.uid).set({
-                        name: User.displayName,
-                        email: User.email
+                db.collection("users").doc(user.uid).set({
+                        name: user.displayName,
+                        email: user.email
                     }).then(function () {
                         console.log("New user added to firestore");
-                        window.location.assign("../homepage.html");
+                        window.location.assign("homepage.html");
                     })
                     .catch(function (error) {
                         console.log("Error adding new user: " + error);
@@ -64,7 +39,7 @@ var uiConfig = {
     },
     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
     signInFlow: 'popup',
-    signInSuccessUrl: '../homepage.html',
+    signInSuccessUrl: 'homepage.html',
     signInOptions: [
         // Leave the lines as is for the providers you want to offer your users.
         //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
