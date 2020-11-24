@@ -41,13 +41,13 @@
             <!-- Lobby Name -->
             <div class="Name">
                 <p id="LobbyName">Lobby Name :</p>
-                <input type="textfield" id="latestNamestatus" placeholder="Name"/>
+                <input type="textfield" id="latestNamestatus" placeholder="Name" />
             </div>
 
             <!-- Type of Game -->
             <div class="Game">
                 <p>Choose a Game :</p>
-                <input list="Games" name="myGame" placeholder="Pick a Game"/>
+                <input list="Games" name="myGame" placeholder="Pick a Game" />
                 <datalist id="Games">
                     <option value="Jackbox">
                     <option value="Skribblio">
@@ -65,12 +65,16 @@
             <!-- Create button -->
             <div class="Create">
                 <a href="Lobby.html">
-                <button id="createButton">Create</button>
+                    <button id="createButton">Create</button>
                 </a>
                 <script src="scripts/Lobby.js"></script>
             </div>
         </div>
     </div>
+
+    <!-- Your own Firebase API key information -->
+    <script src="scripts/groupApi.js"></script>
+
     <script>
         function increment() {
             document.getElementById('demoInput').stepUp();

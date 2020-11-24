@@ -153,3 +153,19 @@ body {
     grid-area: chat;
     padding: 10px;
 }
+
+/* Responsive CSS */
+@media screen and (max-width: 500px) {
+
+    .form {
+      width: 95%;
+    }
+  
+    .form .user-input {
+      width: 100%
+    }
+  
+    .form .btn {
+      width: 100%;
+    }
+  }
