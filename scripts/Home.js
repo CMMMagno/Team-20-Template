@@ -1,4 +1,5 @@
-var homepageApp = {};
+var firebase = fb;
+var uid = null;
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     // User is signed in.
@@ -13,8 +14,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 // Logout out 
 function logOut() {
   firebase.auth().signOut();
-}
-homepageApp.logOut = logOut;
+};
 
 // Game Preview
 var slideIndex = 1;
@@ -47,5 +47,6 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+
 
 
