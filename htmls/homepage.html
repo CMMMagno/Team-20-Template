@@ -7,9 +7,19 @@
     <meta name="comp1800 boilerplate code" content="my bcit project">
     <meta name="Kaki Kagatan" content="BCIT">
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+
     <!-- Bootstrap for Mobile-first, and JQuery -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
 
     <!-- Font-awesome link-->
     <script src="https://kit.fontawesome.com/317c7c3807.js" crossorigin="anonymous"></script>
@@ -44,7 +54,7 @@
                         <a class="nav-link" href="About.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Sign Out</a>
+                        <a class="nav-link" href="" onclick="homepageApp.logOut">Sign Out</a>
                     </li>
                 </ul>
             </div>
@@ -119,6 +129,11 @@
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
+
+    <!-- Your own Firebase API key information -->
+    <script src="../scripts/groupApi.js"></script>
+
+    <!-- Homepage Javascript -->
     <script src="../scripts/home.js"></script>
 </body>
 

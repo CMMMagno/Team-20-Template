@@ -17,6 +17,7 @@
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
+
 </head>
 
 <body>
@@ -41,13 +42,13 @@
             <!-- Lobby Name -->
             <div class="Name">
                 <p id="LobbyName">Lobby Name :</p>
-                <input type="textfield" id="latestNamestatus" placeholder="Name" />
+                <input type="textfield" id="name" placeholder="Name" required />
             </div>
 
             <!-- Type of Game -->
             <div class="Game">
                 <p>Choose a Game :</p>
-                <input list="Games" name="myGame" placeholder="Pick a Game" />
+                <input list="Games" name="myGame" placeholder="Pick a Game" required />
                 <datalist id="Games">
                     <option value="Jackbox">
                     <option value="Skribblio">
@@ -55,9 +56,10 @@
                 </datalist>
             </div>
 
+            <!-- Player Count -->
             <div class="Amount">
                 <p>Player Limit :</p>
-                <input id=demoInput type=number min=0 max=10 placeholder="1-10">
+                <input id=count type=number min=0 max=10 placeholder="1-10" required>
                 <button onclick="increment()">+</button>
                 <button onclick="decrement()">-</button>
             </div>
@@ -65,8 +67,8 @@
             <!-- Create button -->
             <div class="Create">
                 <a href="Lobby.html">
-                    <button id="createButton">Create</button>
-                </a>                
+                    <button id="saveBtn">Create</button>
+                </a>
             </div>
         </div>
     </div>
@@ -75,18 +77,8 @@
     <script src="../scripts/groupApi.js"></script>
 
     <!-- Lobby JavaScript -->
-    <script src="../scripts/lobby.js"></script>
+    <script src="../scripts/creatingLobby.js"></script>
 
-    <script>
-        function increment() {
-            document.getElementById('demoInput').stepUp();
-        }
-
-        function decrement() {
-            document.getElementById('demoInput').stepDown();
-
-        }
-    </script>
 </body>
 
 </html>

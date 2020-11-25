@@ -1,3 +1,22 @@
+var homepageApp = {};
+firebase.auth().onAuthStateChanged(function (user) {
+  if (user) {
+    // User is signed in.
+    uid = user.uid;
+  } else {
+    // Redirect to login page
+    uid = null;
+    window.location.replace("login.html");
+  }
+});
+
+// Logout out 
+function logOut() {
+  firebase.auth().signOut();
+}
+homepageApp.logOut = logOut;
+
+// Game Preview
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -28,3 +47,5 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+
+
