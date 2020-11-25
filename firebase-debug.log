@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [debug] [2020-11-24T18:16:40.196Z] ----------------------------------------------------------------------
 [debug] [2020-11-24T18:16:40.198Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\carlm\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
 [debug] [2020-11-24T18:16:40.199Z] CLI Version:   8.16.2
@@ -9,6 +10,18 @@
 [debug] [2020-11-24T18:16:40.203Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
 [debug] [2020-11-24T18:16:40.227Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
 [debug] [2020-11-24T18:16:40.228Z] > authorizing via signed-in user
+=======
+[debug] [2020-11-25T06:11:38.508Z] ----------------------------------------------------------------------
+[debug] [2020-11-25T06:11:38.510Z] Command:       E:\Node\node.exe C:\Users\kakik\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-11-25T06:11:38.510Z] CLI Version:   8.16.2
+[debug] [2020-11-25T06:11:38.510Z] Platform:      win32
+[debug] [2020-11-25T06:11:38.510Z] Node Version:  v15.0.1
+[debug] [2020-11-25T06:11:38.511Z] Time:          Tue Nov 24 2020 22:11:38 GMT-0800 (Pacific Standard Time)
+[debug] [2020-11-25T06:11:38.511Z] ----------------------------------------------------------------------
+[debug] [2020-11-25T06:11:38.511Z] 
+[debug] [2020-11-25T06:11:38.515Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-25T06:11:38.515Z] > authorizing via signed-in user
+>>>>>>> e87647fbac80285bb4115eb6c13665c592343c1c
 [info] 
      ######## #### ########  ######## ########     ###     ######  ########
      ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
@@ -18,10 +31,19 @@
 
 You're about to initialize a Firebase project in this directory:
 
+<<<<<<< HEAD
   C:\Users\carlm\OneDrive\Documents\Documents - Official\BCIT CST\BCIT COMP 1800\Virtual Socialites
 
 [debug] [2020-11-24T18:16:40.428Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
 [debug] [2020-11-24T18:16:40.428Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+=======
+  C:\Users\kakik\Desktop\Group 20 Project\Team-20-Template
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+>>>>>>> e87647fbac80285bb4115eb6c13665c592343c1c
 [info] 
 === Project Setup
 [info] 
@@ -29,6 +51,7 @@ You're about to initialize a Firebase project in this directory:
 [info] You can create multiple project aliases by running firebase use --add, 
 [info] but for now we'll just set up a default project.
 [info] 
+<<<<<<< HEAD
 [info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
 [debug] [2020-11-24T18:18:00.154Z] ----------------------------------------------------------------------
 [debug] [2020-11-24T18:18:00.156Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\carlm\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
@@ -65,3 +88,46 @@ You're about to initialize a Firebase project in this directory:
 [debug] [2020-11-24T18:18:06.322Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?pageSize=100  
  
 [debug] [2020-11-24T18:18:06.741Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 24 Nov 2020 18:18:08 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+=======
+[info] i  .firebaserc already has a default project, using group-20-68f71. 
+[debug] [2020-11-25T06:11:45.800Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/group-20-68f71  
+ 
+[debug] [2020-11-25T06:11:45.967Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 25 Nov 2020 06:11:46 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+=== Firestore Setup
+[debug] [2020-11-25T06:11:45.968Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/group-20-68f71/services/firestore.googleapis.com  
+ 
+[debug] [2020-11-25T06:11:46.244Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 25 Nov 2020 06:11:46 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-25T06:11:46.245Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/group-20-68f71  
+ 
+[debug] [2020-11-25T06:11:46.551Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 25 Nov 2020 06:11:47 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-25T06:11:46.552Z] database_type: CLOUD_FIRESTORE
+[debug] [2020-11-25T06:11:46.552Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-25T06:11:46.552Z] > authorizing via signed-in user
+[debug] [2020-11-25T06:11:46.552Z] [iam] checking project group-20-68f71 for permissions ["firebase.projects.get"]
+[debug] [2020-11-25T06:11:46.553Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/group-20-68f71:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-11-25T06:11:46.642Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 25 Nov 2020 06:11:47 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=36","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[info] i  Skipping write of ./404.html 
+[debug] [2020-11-25T06:12:16.129Z] >>> HTTP REQUEST GET https://www.gstatic.com/firebasejs/releases.json  
+ 
+[debug] [2020-11-25T06:12:16.194Z] <<< HTTP RESPONSE 200 {"accept-ranges":"bytes","vary":"Accept-Encoding, Origin","content-type":"application/json","cross-origin-resource-policy":"cross-origin","content-length":"1411","date":"Wed, 25 Nov 2020 06:09:49 GMT","expires":"Wed, 25 Nov 2020 06:59:49 GMT","last-modified":"Fri, 20 Nov 2020 01:53:31 GMT","x-content-type-options":"nosniff","server":"sffe","x-xss-protection":"0","cache-control":"public, max-age=3000","age":"147","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""}
+>>>>>>> e87647fbac80285bb4115eb6c13665c592343c1c

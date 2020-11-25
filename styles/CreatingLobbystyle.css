@@ -7,11 +7,27 @@ body {
     padding: 30px;
 }
 
+input {
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    border-radius: 5px;
+    box-shadow: none;
+    border: none;
+}
+
+button:hover {
+    box-shadow: 0px 1px 5px #839b97;
+    color-adjust: 90%;
+    color: #fff;
+}
+
 #container {
     height: 920px;
     width: 480px;
     display: grid;
-    border: 1px solid black;
     grid-template-rows: 1fr 10fr;
     grid-template-areas:
     "nav"
@@ -21,6 +37,7 @@ body {
 }
 
 .Lobby {
+    height: 500px;
     display: grid;
     grid-template-rows: auto;
     grid-template-areas:
@@ -38,4 +55,26 @@ body {
 
 .Game {
     grid-area: Game;
+}
+
+.Amount {
+    grid-area: Amount;
+}
+
+.Amount>button {
+    justify-content: center;
+    align-self: middle;
+    width: 30px;
+    height: 27px;
+    background-color: #fcdab7;
+
+}
+
+.Create {
+    grid-area: Create;
+    margin: 0 auto;
+}
+
+.Create>a>button {
+    background-color: #fcdab7;
 }

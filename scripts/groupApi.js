@@ -2,7 +2,7 @@
 // Your web app's Firebase configuration;
 // Specifies which firebase project your application is connected with.
 //---------------------------------------------------------------------
-
+var fb = {};
 var firebaseConfig = {
 
   // Your API stuff goes here;  get it from firebase console
@@ -20,4 +20,5 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 // Create the Firestore database object
 // Henceforce, any reference to the database can be made with "db"
+fb = firebase;
 const db = firebase.firestore();

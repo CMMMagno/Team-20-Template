@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>Login</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+
+	<!-- Add Firebase products that you want to use -->
+	<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="../images/VS.ico" />
+
+</head>
+
+<body>
+	<!-- The surrounding HTML is left untouched by FirebaseUI.
+     Your app may use that space for branding, controls and other customizations.-->
+	<h1>Virtual Socialites</h1>
+	<div id="firebaseui-auth-container"></div>
+	<div id="loader">Loading...</div>
+
+
+	<!-- Your own Firebase API key information -->
+	<script src="../scripts/groupApi.js"></script>
+
+	<!-- Your own JavaScript functions included here -->
+	<script src="../scripts/login.js" defer></script>
+
+</body>
+
+</html>

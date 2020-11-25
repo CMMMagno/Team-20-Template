@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
     <!-- Optional styles and scripts of your own -->
-    <link rel="stylesheet" href="styles/Calendar.css">
-    <link href='styles/main.css' rel='stylesheet' />
+    <link rel="stylesheet" href="../styles/Calendar.css">
+    <link href='../styles/main.css' rel='stylesheet' />
 
-    <script src='scripts/main.js'></script>
-    <script src='scripts/day.js'></script>
+    <script src='../scripts/main.js'></script>
+    <script src='../scripts/day.js'></script>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/VS.ico" />
+    <link rel="icon" type="image/png" href="../images/VS.ico" />
 </head>
 
 <body>
@@ -44,18 +44,12 @@
 
     <!-- Calendar Page -->
     <div id="calendar">
-
     </div>
 
     <footer class="navbar fixed-bottom bg-warning justify-content-around">
-
         <i class="fa fa-chevron-left" aria-hidden="true" onclick="goBack()"></i>
-        <i class="fa fa-home" aria-hidden="true"></i>
+        <i class="fa fa-home" aria-hidden="true" onclick="goHome()"></i>
         <i class="fa fa-chevron-right" aria-hidden="true" onclick="goForward()"></i>
-
-
-
-
     </footer>
 
     <!----------------------------------------------->
@@ -90,6 +84,12 @@
     <script>
         function goBack() {
             window.history.back();
+        }
+    </script>
+
+    <script>
+        function goHome() {
+            window.location.href='homepage.html';
         }
     </script>
 
