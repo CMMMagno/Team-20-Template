@@ -26,9 +26,9 @@ var uiConfig = {
         //firebase.auth.PhoneAuthProvider.PROVIDER_ID
     ],
     // Terms of service url.
-    tosUrl: 'homepage.html',
+    tosUrl: 'https://cloud.google.com/terms/',
     // Privacy policy url.
-    privacyPolicyUrl: '<your-privacy-policy-url>'
+    privacyPolicyUrl: 'https://firebase.google.com/support/privacy'
 };
 
 ui.start('#firebaseui-auth-container', uiConfig);

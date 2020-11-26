@@ -10,10 +10,6 @@ body {
   padding: 0px;
 }
 
-#container {
-  height: 920px;
-  width: 480px;
-}
-.firebaseui-auth-container>mdl-card {
-  border-radius: 50px;
+#loader {
+  color: white;
 }

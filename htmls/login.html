@@ -13,8 +13,15 @@
 	<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
 
+	<!-- Firebase Auth UI -->
 	<script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
 	<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
+
+	<!-- Login Stylesheet-->
+	<link rel="stylesheet" href="../styles/login.css">
+
+	<!-- Font-awesome link-->
+	<script src="https://kit.fontawesome.com/317c7c3807.js" crossorigin="anonymous"></script>
 
 	<!-- Favicon -->
 	<link rel="icon" type="image/png" href="../images/VS.ico" />
@@ -22,12 +29,13 @@
 </head>
 
 <body>
-	<div id="container">
-		<!-- The surrounding HTML is left untouched by FirebaseUI.
+	<!-- The surrounding HTML is left untouched by FirebaseUI.
 	 Your app may use that space for branding, controls and other customizations.-->
-		</br></br></br></br></br></br>
-		<div id="firebaseui-auth-container"></div>
-		<div id="loader">Loading...</div>
+	<div id="firebaseui-auth-container"></div>
+	<div id="loader">
+		<h1>
+			<i class="fas fa-spinner"></i> Loading...
+		</h1>
 	</div>
 
 	<!-- Your own Firebase API key information -->
