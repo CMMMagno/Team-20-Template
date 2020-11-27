@@ -1,11 +1,7 @@
-//---------------------------------------------------------------------
-// Your web app's Firebase configuration;
-// Specifies which firebase project your application is connected with.
-//---------------------------------------------------------------------
-var fb = {};
-var firebaseConfig = {
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
-  // Your API stuff goes here;  get it from firebase console
+var firebaseConfig = {
   apiKey: "AIzaSyAX9CCcCUrLL2NhSkknMZPnoj7WteFCyC0",
   authDomain: "group-20-68f71.firebaseapp.com",
   databaseURL: "https://group-20-68f71.firebaseio.com",
@@ -15,10 +11,8 @@ var firebaseConfig = {
   appId: "1:946471654834:web:c1c9dbbd720692b56480ab",
   measurementId: "G-TBS0PL8RWD"
 };
-
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-// Create the Firestore database object
-// Henceforce, any reference to the database can be made with "db"
-fb = firebase;
+
+var fb = firebase;
 const db = firebase.firestore();

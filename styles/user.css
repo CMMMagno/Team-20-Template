@@ -1,0 +1,32 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    background-color: #133b5c;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Container */
+#container {
+    height: 920px;
+    width: 480px;
+    display: grid;
+    grid-template-rows: 0.5fr 2fr 3fr;
+    grid-template-areas:
+        "nav"
+        "list";
+    row-gap: 20px;
+    padding: 10px;
+}
+/* Nav */
+nav {
+    grid-area: nav;
+    color: #cfd3ce;
+    align-items: center;
+}
+
+.navbar>button {
+    border: none;
+}

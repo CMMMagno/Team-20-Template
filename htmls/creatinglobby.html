@@ -5,27 +5,23 @@
     <meta charset="utf-8">
     <title>Creating Lobby</title>
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
-
-    <!-- Add Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
-
     <!-- Bootstrap for Mobile-first, and JQuery -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
 
     <!-- Optional styles and scripts of your own -->
     <link rel="stylesheet" href="../styles/CreatingLobbystyle.css">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../images/VS.ico" />
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
 
 </head>
 
@@ -46,18 +42,18 @@
             </div>
         </nav>
 
-        <div class="Lobby">
+        <form id="Lobby">
 
             <!-- Lobby Name -->
             <div class="Name">
-                <p id="LobbyName">Lobby Name :</p>
-                <input type="textfield" id="name" placeholder="Name" required />
+                <p>Lobby Name :</p>
+                <input type="textfield" name="name" placeholder="Name" required />
             </div>
 
             <!-- Type of Game -->
             <div class="Game">
                 <p>Choose a Game :</p>
-                <input list="Games" name="myGame" placeholder="Pick a Game" required />
+                <input list="Games" name="game" placeholder="Pick a Game" required />
                 <datalist id="Games">
                     <option value="Jackbox">
                     <option value="Skribblio">
@@ -68,7 +64,7 @@
             <!-- Player Count -->
             <div class="Amount">
                 <p>Player Limit :</p>
-                <input id=count type=number min=0 max=10 placeholder="1-10" required>
+                <input id="count" name=count type=number min=0 max=10 placeholder="1-10" required>
                 <button onclick="increment()">+</button>
                 <button onclick="decrement()">-</button>
             </div>
@@ -79,12 +75,13 @@
                     <button id="saveBtn">Create</button>
                 </a>
             </div>
-        </div>
+        </form>
     </div>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
     <!----------------------------------------------->
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
@@ -95,14 +92,16 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
 
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
     <!-- Your own Firebase API key information -->
     <script src="../scripts/groupApi.js"></script>
 
-    <!-- Check if User is Logged In Script -->
-    <script src="../scripts/ifUserLoggedIn.js"></script>
-
     <!-- Lobby JavaScript -->
     <script src="../scripts/creatingLobby.js"></script>
+
+    <!-- Check if User is Logged on -->
+    <script src="../scripts/userLogInStatus.js"></script>
 
 </body>
 

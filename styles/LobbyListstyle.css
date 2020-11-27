@@ -6,6 +6,7 @@ body {
     background-color: #133b5c;
 }
 
+/* Container */
 #container {
     height: 920px;
     width: 480px;
@@ -13,31 +14,35 @@ body {
     grid-template-rows: 1fr 0.5fr 10fr;
     grid-template-areas: 
     "nav"
-    "header"
-    "section";
+    "Creating"
+    "Lobbies";
 }
 
+/* Nav */
 nav {
     grid-area: nav;
 }
 
-header {
-    grid-area: header;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.navbar>button {
+    border: none;
 }
 
+/* Create Button */
+.Creating {
+    width: 100px;
+    grid-area: Creating;
+    display: grid;
+}
 
-header>p {
+.Creating>p {
     color: black;
 }
 
-header>button,
-header>div>a>button {
+.Creating>a>button {
     width: 100px;
     height: 25px;
     background-color: #fcdab7;
-    border: transparent;
+    border: none;
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
@@ -47,32 +52,34 @@ header>div>a>button {
     cursor: pointer;
 }
 
-header>button:hover,
-header>a>button:hover {
+.Creating>a>button:hover {
     box-shadow: 0px 1px 15px #839b97;
     color: #fff;
     transform: translateY(-1px);
 }
 
-
-.Sorting {
-    columns: 1;
-}
-
-.Creating {
-    columns: 2;
-}
-
-section {
-    grid-area: section;
+/* Lobby List */
+.Lobbies> ul {
+    grid-area: Lobbies;
     display: grid;
     margin: 20px;
     row-gap: 10px;
     padding: 10px;
+    background-color: #1d2d50;
+    border-radius: 10px;
 }
 
-section > div {
-    border: 1px solid white;
+.list {
+    display: grid;
+}
+
+.Lobbies> ul > button {
+    background-color: #fcdab7;
     border-radius: 10px;
-    padding: 10px;
+    border: none;
+}
+
+.Lobbies> ul > button:hover {
+    box-shadow: 0px 1px 15px #839b97;
+    color: #fff;
 }

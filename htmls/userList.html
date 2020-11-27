@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Home</title>
+    <title>Users</title>
     <meta name="comp1800 boilerplate code" content="my bcit project">
     <meta name="Kaki Kagatan" content="BCIT">
 
@@ -22,7 +22,7 @@
     <script src="https://kit.fontawesome.com/317c7c3807.js" crossorigin="anonymous"></script>
 
     <!-- Optional styles and scripts of your own -->
-    <link rel="stylesheet" href="../styles/Homestyle.css">
+    <link rel="stylesheet" href="../styles/user.css">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../images/VS.ico" />
@@ -40,13 +40,18 @@
         <!-- Header Navigation Bar -->
         <nav class="navbar navbar-lg navbar-dark bg-transparent">
             <h1 class="navbar-brand" href="homepage.html">
-                <i class="fas fa-home"></i> HomePage
+                <i class="fas fa-home"></i> Users
             </h1>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage.html">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="profile.html">
                             <i class="fas fa-user-circle"></i> My Profile
@@ -64,60 +69,16 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="list">
+                <ul id="users">
+                    <li>
+
+                    </li>
+                </ul>
+
+            </div>
         </nav>
-
-        <!-- Game Preview -->
-        <div class="preview">
-
-            <div class="mySlides">
-                <img src="../images/Game Preview/among-us.jpg">
-                <div class="text">Among Us</div>
-            </div>
-
-            <div class="mySlides">
-                <img src="../images/Game Preview/Jackbox.jpeg">
-                <div class="text">Jackbox</div>
-            </div>
-
-            <div class="mySlides">
-                <img src="../images/Game Preview/Skribblio.png">
-                <div class="text">Skribblio</div>
-            </div>
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-
-        </div>
-
-        <!-- Categories -->
-        <div class="categories">
-            <a href="calendar.html">
-                <button class="calendar">
-                    <img src="../images/Icons/calendar.png" width="40" height="40">
-                    <h3>Calendar</h3>
-                </button>
-            </a>
-            <a href="LobbyList.html">
-                <button class="lobbies">
-                    <img src="../images/Icons/game.png" width="40" height="40">
-                    <h3>Activities</h3>
-                </button>
-            </a>
-            <a href="userList.html">
-                <button class="users">
-                    <img src="../images/Icons/group.png" width="40" height="40">
-                    <h3>Users</h3>
-                </button>
-            </a>
-        </div>
-
-    </div>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
@@ -142,8 +103,6 @@
     <!-- Check if User is Logged In Script -->
     <script src="../scripts/userLogInStatus.js"></script>
 
-    <!-- Homepage Javascript -->
-    <script src="../scripts/home.js"></script>
 </body>
 
 </html>
