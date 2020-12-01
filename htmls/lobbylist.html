@@ -32,7 +32,7 @@
 <body>
     <div id="container">
         <!-- Header Navigation Bar -->
-        <nav class="navbar navbar-lg navbar-dark bg-transparent">
+        <nav class="navbar navbar-lg navbar-dark bg fixed-top">
             <h1 class="navbar-brand" href="homepage.html">
                 <i class="fas fa-clipboard-list"></i> Lobby List
             </h1>
@@ -64,21 +64,23 @@
                 </ul>
             </div>
         </nav>
-    </div>
 
-    <div class="Creating">
-        <a href="CreatingLobby.html">
+        <div class="Creating">
+            <a href="CreatingLobby.html">
+                <button>
+                    <i class="fas fa-cog"></i> Create
+                </button>
+            </a>
             <button>
-                <i class="fas fa-cog"></i> Create
+                <i class="fas fa-sort"></i> Sort
             </button>
-        </a>
-    </div>
-    <div class="Lobbies">
-        <ul id="list">
-        </ul>
-    </div>
+        </div>
+        <div class="Lobbies">
+            <ul id="list">
+            </ul>
+        </div>
 
-
+    </div>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->

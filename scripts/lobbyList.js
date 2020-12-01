@@ -18,7 +18,7 @@ function renderLobby(doc){
     list.appendChild(btn);
 }
 
-db.collection('lobby').where('Game', '==', 'Among Us').get().then((snapshot) => {
+db.collection('lobby').get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
         renderLobby(doc);
         console.log(doc.data());

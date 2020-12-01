@@ -13,7 +13,7 @@ body {
     height: 920px;
     width: 480px;
     display: grid;
-    grid-template-rows: 0.5fr 2fr 3fr;
+    grid-template-rows: 0.3fr 2fr 3fr;
     grid-template-areas:
         "nav"
         "preview"
@@ -139,6 +139,11 @@ body {
         "lobbies"
         "users";
     margin: 0 auto;
+}
+
+.categories>a {
+    width: 400px;
+    height: 100px;
 }
 
 .categories>a>button {

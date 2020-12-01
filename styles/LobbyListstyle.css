@@ -27,17 +27,24 @@ nav {
     border: none;
 }
 
+.bg {
+    background-color: #1d2d50;
+}
+
+.nav-item {
+    text-align: center;
+}
+
 /* Create Button */
 .Creating {
-    width: 100px;
     grid-area: Creating;
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 200px;
+    padding-left: 25px;
 }
 
-.Creating>p {
-    color: black;
-}
-
+.Creating>button,
 .Creating>a>button {
     width: 100px;
     height: 30px;
@@ -52,6 +59,7 @@ nav {
     cursor: pointer;
 }
 
+.Creating>button:hover,
 .Creating>a>button:hover {
     box-shadow: 0px 1px 15px #839b97;
     color: #fff;
@@ -59,8 +67,11 @@ nav {
 }
 
 /* Lobby List */
-.Lobbies> ul {
+.Lobbies {
     grid-area: Lobbies;
+}
+
+.Lobbies> ul {
     display: grid;
     margin: 20px;
     row-gap: 10px;
