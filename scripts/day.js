@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
-        
+
         selectable: true,
         dateClick: function (dateClickInfo) {
             confirmEventDay(dateClickInfo);
@@ -20,8 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         },
 
-        events: [
-            {
+        events: [{
                 title: 'Canada Day',
                 start: '2020-07-01',
             },
@@ -68,10 +67,16 @@ function confirmEventDay(dateClickInfo) {
             title: eventTitle,
             start: dateClickInfo.date,
         });
+        db.collection('event').add({
+            ID: index++,
+            title: eventTitle,
+            start: date.getDate(),
+        });
     }
 }
 
 function confirmEventButton() {
+    var index = 0;
     if (promptEvent()) {
         var eventDate = prompt('Enter event date:');
         var date = new Date(eventDate + 'T00:00:00');
@@ -80,7 +85,12 @@ function confirmEventButton() {
             calendar.addEvent({
                 title: eventTitle,
                 start: date.getDate(),
-            })
+            });
+            db.collection('event').add({
+                ID: index++,
+                title: eventTitle,
+                start: date.getDate(),
+            });
         }
     }
 }

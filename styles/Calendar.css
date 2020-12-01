@@ -1,5 +1,6 @@
 body {
-    background-color: #1e5f74;
+    background-color: #1d2d50;
+    1e5f74
 }
 * {box-sizing: border-box;}
 ul {list-style-type: none;}
@@ -116,4 +117,24 @@ th, tr, td {
   padding-bottom: 5rem;
   vertical-align: top;
   text-align: left;
+}
+
+.mb-1 {
+  margin-bottom: 100em;
+}
+
+.pt-1 {
+  padding-top: 50em;
+}
+
+.pl-1 {
+  padding-left: 50em;
+}
+
+.pr-1 {
+  padding-right: 50em;
+}
+
+.bg-calendar {
+  background-color: #1e5f74;
 }
