@@ -43,6 +43,7 @@ button:hover {
     grid-template-areas:
     "Name"
     "Game"
+    "Code"
     "Amount"
     "Create";
     align-items: center;
@@ -57,17 +58,12 @@ button:hover {
     grid-area: Game;
 }
 
-.Amount {
-    grid-area: Amount;
+.Code {
+    grid-area: Code;
 }
 
-.Amount>button {
-    justify-content: center;
-    align-self: middle;
-    width: 30px;
-    height: 27px;
-    background-color: #fcdab7;
-
+.Amount {
+    grid-area: Amount;
 }
 
 .Create {

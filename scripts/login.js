@@ -13,6 +13,7 @@ var uiConfig = {
             document.getElementById('loader').style.display = 'none';
         }
     },
+
     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
     signInFlow: 'popup',
     signInSuccessUrl: 'homepage.html',
@@ -32,3 +33,22 @@ var uiConfig = {
 };
 
 ui.start('#firebaseui-auth-container', uiConfig);
+
+function getUser() {
+    firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+            //console.log("user is signed in");
+            db.collection("users")
+                .doc(user.uid)
+                .get()
+                .then(function (doc) {
+                    var n = doc.data().name;
+                    //console.log(n);
+                    $("#username").text(n);
+                })
+        } else {
+            console.log("no user is signed in");
+        }
+    })
+}
+getUser();
