@@ -1,7 +1,7 @@
 body {
     min-height: 100vh;
     display: flex;
-    background-color: #133b5c;
+    background-color:#ebe7d9;
     align-items: center;
     justify-content: center;
     margin: 0px;
@@ -34,7 +34,7 @@ body {
 }
 
 .bg {
-    background-color: #1d2d50;
+    background-color:#0E1A22;
 }
 
 .nav-item {
@@ -54,7 +54,7 @@ body {
 .mySlides>img {
     width: 400px;
     height: 250px;
-    border: 1px solid white;
+    border: 1px solid #0E1A22;
     border-radius: 10px;
 }
 
@@ -83,11 +83,7 @@ body {
     border-bottom-left-radius: 20px;
 }
 
-.prev:hover {
-    background-color: white;
-    opacity: 50%;
-}
-
+.prev:hover,
 .next:hover {
     background-color: white;
     opacity: 50%;
@@ -150,7 +146,7 @@ body {
     width: 400px;
     height: 100px;
     background-color: #fcdab7;
-    border: 1px solid white;
+    border: 3px solid #0E1A22;
     border-radius: 10px;
     color: #1d2d50;
     text-align: center;
