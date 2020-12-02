@@ -1,11 +1,23 @@
 body {
-    background-color: #ebe7d9;
-    padding-top: 200px;
+  background-color: #ebe7d9;
+  padding-top: 200px;
 }
 
-* {box-sizing: border-box;}
-ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
+h1 {
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+}
 
 h2 {
   color: white;
@@ -16,21 +28,33 @@ h2 {
   display: grid;
   height: 920px;
   width: 480px;
-  grid-template-rows: 1fr 10fr;
-  grid-template-areas: 
-  "nav"
-  "calendar";
+  grid-template-rows: 0.5fr 10fr;
+  grid-template-areas:
+    "nav"
+    "calendar";
 }
 
-/* Nav Bar */
-.navbar {
+/* Nav */
+nav {
   grid-area: nav;
-  color: #cfd3ce;
-  align-items: center;
+}
+
+.navbar>button {
+  border: none;
 }
 
 .bg {
-  background-color:#0E1A22;
+  background-color: #0E1A22;
+}
+
+.nav-item {
+  text-align: center;
+}
+
+.navbar>a>button {
+  background: transparent;
+  border: transparent;
+  color: white;
 }
 
 /* Calendar */
@@ -38,7 +62,7 @@ h2 {
 #calendar {
   width: auto;
   height: 610px;
- 
+
 }
 
 .bg-calendar {
@@ -48,7 +72,9 @@ h2 {
   border-radius: 10px;
 }
 
-th, tr, td {
+th,
+tr,
+td {
   background-color: #fcdab7;
   cursor: pointer;
 }
@@ -59,14 +85,29 @@ th {
 
 /* Add media queries for smaller screens */
 @media screen and (max-width:720px) {
-  .weekdays li, .days li {width: 13.1%;}
+
+  .weekdays li,
+  .days li {
+    width: 13.1%;
+  }
 }
 
 @media screen and (max-width: 420px) {
-  .weekdays li, .days li {width: 12.5%;}
-  .days li .active {padding: 2px;}
+
+  .weekdays li,
+  .days li {
+    width: 12.5%;
+  }
+
+  .days li .active {
+    padding: 2px;
+  }
 }
 
 @media screen and (max-width: 290px) {
-  .weekdays li, .days li {width: 12.2%;}
+
+  .weekdays li,
+  .days li {
+    width: 12.2%;
+  }
 }

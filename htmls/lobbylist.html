@@ -76,9 +76,16 @@
                     <i class="fas fa-cog"></i> Create
                 </button>
             </a>
-            <button>
-                <i class="fas fa-sort"></i> Sort
-            </button>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <i class="fas fa-sort"></i> Sort
+                    <div class="dropdown-content">
+                        <a href="#" onclick="sortAmongUs()">Among Us</a>
+                        <a href="#" onclick="sortJackBox()">Jackbox</a>
+                        <a href="#" onclick="sortScribblio()">Scribblio</a>
+                    </div>
+                </button>
+            </div>
         </div>
         <div class="Lobbies">
             <ul id="list">

@@ -1,11 +1,10 @@
 body {
     min-height: 100vh;
     display: flex;
-    background-color: #133b5c;
+    background-color: #ebe7d9;
     align-items: center;
     justify-content: center;
-    margin: 0px;
-    padding: 0px;
+    padding-top: 100px;
 }
 
 /* Container */
@@ -23,10 +22,22 @@ body {
 /* Nav */
 nav {
     grid-area: nav;
-    color: #cfd3ce;
-    align-items: center;
 }
 
 .navbar>button {
     border: none;
+}
+
+.bg {
+    background-color: #0E1A22;
+}
+
+.nav-item {
+    text-align: center;
+}
+
+.navbar>a>button {
+    background: transparent;
+    border: transparent;
+    color: white;
 }

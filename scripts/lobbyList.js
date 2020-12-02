@@ -23,8 +23,8 @@ db.collection('lobby').get().then((snapshot) => {
         renderLobby(doc);
         console.log(doc.data());
     })
-    
 })
+
 
 
 

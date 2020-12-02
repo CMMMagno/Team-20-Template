@@ -12,10 +12,10 @@ body {
     width: 480px;
     display: grid;
     grid-template-rows: 1fr 0.5fr 10fr;
-    grid-template-areas: 
-    "nav"
-    "Creating"
-    "Lobbies";
+    grid-template-areas:
+        "nav"
+        "Creating"
+        "Lobbies";
 }
 
 /* Nav */
@@ -41,7 +41,7 @@ nav {
     color: white;
 }
 
-/* Create Button */
+/* Create and Sort buttons */
 .Creating {
     grid-area: Creating;
     display: grid;
@@ -72,12 +72,65 @@ nav {
     transform: translateY(-1px);
 }
 
+.dropbtn {
+    width: 100px;
+    height: 40px;
+    border: 2px solid #0E1A22;
+    border-radius: 5px;
+    background-color: #fcdab7;
+    color: black;
+    padding: 0px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown {
+    width: 100px;
+    height: 40px;
+    position: relative;
+    display: inline-block;
+
+    border-radius: 10px;
+
+}
+
+.dropbtn:hover {
+    box-shadow: 0px 1px 15px #839b97;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fcdab7;
+    ;
+    min-width: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 /* Lobby List */
 .Lobbies {
     grid-area: Lobbies;
 }
 
-.Lobbies> ul {
+.Lobbies>ul {
     display: grid;
     margin: 20px;
     row-gap: 10px;
@@ -90,19 +143,19 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "Name Players"
-    "Game Players";
+    grid-template-areas:
+        "Name Players"
+        "Game Players";
 
 }
 
-.Lobbies> ul > button {
+.Lobbies>ul>button {
     background-color: #fcdab7;
     border-radius: 10px;
     border: none;
 }
 
-.Lobbies> ul > button:hover {
+.Lobbies>ul>button:hover {
     box-shadow: 0px 1px 15px #839b97;
     color: #fff;
 }
