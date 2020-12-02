@@ -1,95 +1,60 @@
 body {
-    background-color: #1d2d50;
+    background-color: #ebe7d9;
+    padding-top: 200px;
 }
 
 * {box-sizing: border-box;}
 ul {list-style-type: none;}
 body {font-family: Verdana, sans-serif;}
 
-body {
-  padding: 40px;
+h2 {
+  color: white;
 }
 
+/* Container */
+#container {
+  display: grid;
+  height: 920px;
+  width: 480px;
+  grid-template-rows: 1fr 10fr;
+  grid-template-areas: 
+  "nav"
+  "calendar";
+}
+
+/* Nav Bar */
+.navbar {
+  grid-area: nav;
+  color: #cfd3ce;
+  align-items: center;
+}
+
+.bg {
+  background-color:#0E1A22;
+}
+
+/* Calendar */
+
+#calendar {
+  width: auto;
+  height: 610px;
+ 
+}
+
+.bg-calendar {
+  grid-area: calendar;
+  background-color: #0E1A22;
+  padding: 10px;
+  border-radius: 10px;
+}
 
 th, tr, td {
   background-color: #fcdab7;
-  color: black;
+  cursor: pointer;
 }
 
-.month {
-  padding: 70px 25px;
-  width: 100%;
-  background: transparent;
-  text-align: center;
-}
-
-.month ul {
-  margin: 0;
-  padding: 0;
-}
-
-.month ul li {
-  color: white;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-.month .prev {
-  float: left;
-  padding-top: 10px;
-}
-
-.month .next {
-  float: right;
-  padding-top: 10px;
-}
-
-.weekdays {
-  margin: 0;
-  padding: 10px 0;
-  background-color: transparent;
-}
-
-.weekdays li {
-  display: inline-block;
-  width: 13.6%;
-  color: white;
-  text-align: center;
-}
-
-.days {
-  padding: 10px 0;
-  background: transparent;
-  margin: 0;
-}
-
-.days li {
-  list-style-type: none;
-  display: inline-block;
-  width: 13.6%;
-  text-align: center;
-  margin-bottom: 5px;
-  font-size:12px;
-  color: white;
-}
-
-.days li .active {
-  padding: 5px;
-  background: #1abc9c;
-  color: white !important
-}
-
-.card-header {
-  padding: 0.75rem 1.25rem;
-  margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-  justify-content: center;
-}
-
-.form-inline {
-  justify-content: center;
+th {
+  cursor: default;
 }
 
 /* Add media queries for smaller screens */
@@ -104,37 +69,4 @@ th, tr, td {
 
 @media screen and (max-width: 290px) {
   .weekdays li, .days li {width: 12.2%;}
-}
-
-.table-hd th {
-  border: 1px solid black;
-}
-
-.table-lrg th,
-.table-lrg tr,
-.table-lrg td {
-  border: 1px solid black;
-  padding-bottom: 5rem;
-  vertical-align: top;
-  text-align: left;
-}
-
-.mb-1 {
-  margin-bottom: 100em;
-}
-
-.pt-1 {
-  padding-top: 50em;
-}
-
-.pl-1 {
-  padding-left: 50em;
-}
-
-.pr-1 {
-  padding-right: 50em;
-}
-
-.bg-calendar {
-  background-color: #1e5f74;
 }
