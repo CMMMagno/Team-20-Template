@@ -3,7 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #133b5c;
+    background-color: #ebe7d9;
 }
 
 /* Container */
@@ -28,11 +28,17 @@ nav {
 }
 
 .bg {
-    background-color: #1d2d50;
+    background-color: #0E1A22;
 }
 
 .nav-item {
     text-align: center;
+}
+
+.navbar>a>button {
+    background: transparent;
+    border: transparent;
+    color: white;
 }
 
 /* Create Button */
@@ -41,15 +47,15 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 200px;
-    padding-left: 25px;
+    padding-left: 20px;
 }
 
 .Creating>button,
 .Creating>a>button {
     width: 100px;
-    height: 30px;
+    height: 40px;
     background-color: #fcdab7;
-    border: none;
+    border: 2px solid #0E1A22;
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
@@ -76,7 +82,7 @@ nav {
     margin: 20px;
     row-gap: 10px;
     padding: 10px;
-    background-color: #1d2d50;
+    background-color: #0E1A22;
     border-radius: 10px;
 }
 
