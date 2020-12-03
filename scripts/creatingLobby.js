@@ -8,6 +8,8 @@ form.addEventListener('submit', (e) => {
     Game: form.game.value,
     Code: form.code.value,
     Players: form.count.value
+  }).then(function(){
+    window.location.replace('lobby.html');
   })
 });
 

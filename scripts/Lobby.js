@@ -26,10 +26,10 @@ function renderLobby(doc) {
     cross.addEventListener('click', (e) => {
         e.stopPropagation();
         let id = e.target.parentElement.getAttribute('data-id');
-        db.collection('lobby').doc(id).delete();
-        window.location.replace('lobbylist.html');
+        db.collection('lobby').doc(id).delete().then(function(){
+            window.location.replace('lobbylist.html');
+        })
     })
-
 }
 
 db.collection('lobby').get().then((snapshot) => {
