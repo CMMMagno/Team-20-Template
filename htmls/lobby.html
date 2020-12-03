@@ -5,42 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+
     <!-- Optional styles and scripts of your own -->
-    <link rel="stylesheet" href="../styles/Lobbystyle.css">
+    <link rel="stylesheet" href="../styles/lobbystyle.css">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../images/VS.ico" />
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
- 
-    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+    <!-- Font-awesome link-->
+    <script src="https://kit.fontawesome.com/317c7c3807.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <!-------------------------------------->
+    <!-- The following is HTML for layout -->
+    <!-------------------------------------->
     <div id="container">
         <!-- Header Navigation Bar -->
-        <nav class="navbar navbar-expand navbar-dark bg-transparent">
-            <h1 class="navbar-brand" href="">Lobby</h1>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="LobbyList.html">Close</a>
-                    </li>
-                </ul>
+        <nav class="navbar navbar-dark bg fixed-top">
+            <h1 class="navbar-brand" href="homepage.html">
+                <i class="fas fa-comments"></i> Lobby
+            </h1>
+            <div class="nav-options">
+                <a class="nav-link" onclick='logOut()' type="button">
+                    <i class="far fa-times-circle"></i> Close
+                </a>
             </div>
         </nav>
-
-        <div id="name">
-
-        </div>
     </div>
 
     </div>
+    <!----------------------------------------------->
+    <!-- JS: Boostrap, Firebase, API related    -->
+    <!----------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
 
+    <!-- Homepage Javascript -->
     <script src="../scripts/lobby.js"></script>
 
+    <!-- Your own Firebase API key information -->
     <script src="../scripts/groupApi.js"></script>
+
+    <!-- Check if User is Logged In Script -->
+    <script src="../scripts/auth.js"></script>
+
 </body>

@@ -31,6 +31,45 @@
     <!-- The following is HTML for layout -->
     <!-------------------------------------->
 
+    <!-- Header Navigation Bar -->
+    <nav class="navbar navbar-lg navbar-dark bg fixed-top">
+        <a href="homepage.html">
+            <button>
+                <i class="fas fa-undo"></i> Back
+            </button>
+        </a>
+        <h1 class="navbar-brand">
+            <i class="fas fa-clipboard-list"></i> About Us
+        </h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="homepage.html">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">
+                        <i class="fas fa-user-circle"></i> My Profile
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About.html">
+                        <i class="fas fa-exclamation-circle"></i> About Us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick='logOut()' type="button">
+                        <i class="fas fa-sign-out-alt"></i> Sign Out
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <div id="index">
         <h1 class="display-4">About us</h1>
         <p class="lead">Virtual Socialites is a non-profit website intended for students to socialize and have fun with
@@ -51,34 +90,10 @@
         </p>
     </div>
 
-    <footer class="navbar fixed-bottom bg-warning justify-content-around">
-        <i class="fa fa-chevron-left" aria-hidden="true" onclick="goBack()"></i>
-        <i class="fa fa-home" aria-hidden="true" onclick="goHome()"></i>
-        <i class="fa fa-chevron-right" aria-hidden="true" onclick="goForward()"></i>
-    </footer>
-
     <!-- Your own Firebase API key information -->
     <script src="../scripts/groupApi.js"></script>
-    <script src="../scripts/about.js"></script>
+    <script src="../scripts/auth.js"></script>
     <script src="https://kit.fontawesome.com/317c7c3807.js" crossorigin="anonymous"></script>
-
-    <script>
-        function goForward() {
-            window.history.forward();
-        }
-    </script>
-
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
-
-    <script>
-        function goHome() {
-            window.location.href = 'homepage.html';
-        }
-    </script>
 
 </body>
 

@@ -22,23 +22,26 @@ body {
     padding: 10px;
 }
 
+a,
+a:hover {
+    color: grey;
+}
+
 /* Nav */
 .navbar {
     grid-area: nav;
-    color: #cfd3ce;
+    color: gray;
     align-items: center;
+    height: 70px;
 }
 
-.navbar>button {
-    border: 2px solid white;
+.nav-options{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .bg {
     background-color:#0E1A22;
-}
-
-.nav-item {
-    text-align: center;
 }
 
 /* Game Preview */
@@ -159,7 +162,6 @@ body {
 
 .categories>a>button:hover {
     box-shadow: 0px 1px 15px #839b97;
-    color: #fff;
     transform: translateY(-3px);
 }
 

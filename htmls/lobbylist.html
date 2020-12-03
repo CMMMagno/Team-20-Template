@@ -52,11 +52,6 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="profile.html">
-                            <i class="fas fa-user-circle"></i> My Profile
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="About.html">
                             <i class="fas fa-exclamation-circle"></i> About Us
                         </a>
@@ -80,9 +75,9 @@
                 <button class="dropbtn">
                     <i class="fas fa-sort"></i> Sort
                     <div class="dropdown-content">
-                        <a href="#" onclick="sortAmongUs()">Among Us</a>
-                        <a href="#" onclick="sortJackBox()">Jackbox</a>
-                        <a href="#" onclick="sortScribblio()">Scribblio</a>
+                        <a href="#" onclick="displayLobbyByFilter('Among Us')">Among Us</a>
+                        <a href="#" onclick="displayLobbyByFilter('Jackbox')">Jackbox</a>
+                        <a href="#" onclick="displayLobbyByFilter('Scribblio')">Scribblio</a>
                     </div>
                 </button>
             </div>
@@ -112,7 +107,7 @@
 
     <script src="../scripts/lobbyList.js"></script>
 
-    <script src="../scripts/userLogInStatus.js"></script>
+    <script src="../scripts/auth.js"></script>
 
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->

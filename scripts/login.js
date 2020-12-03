@@ -5,8 +5,23 @@ var uiConfig = {
             // User successfully signed in.
             // Return type determines whether we continue the redirect automatically
             // or whether we leave that to developer to handle.
+            var user = authResult.user;
+            if (authResult.additionalUserInfo.isNewUser) {
+                db.collection("users").doc(user.uid).set({
+                    name: user.displayName,
+                    email: user.email
+                }).then(function() {
+                    console.log("New user added to firestore");
+                    window.location.assign("homepage.html");
+                })
+                .catch(function (error) {
+                    console.log("Error adding new user: " + error);
+                });
+        } else {
             return true;
-        },
+        }
+        return false;
+    },
         uiShown: function () {
             // The widget is rendered.
             // Hide the loader.
@@ -29,26 +44,10 @@ var uiConfig = {
     // Terms of service url.
     tosUrl: 'https://cloud.google.com/terms/',
     // Privacy policy url.
-    privacyPolicyUrl: 'https://firebase.google.com/support/privacy'
+    privacyPolicyUrl: 'https://firebase.google.com/support/privacy',
+    accountChooserEnabled: false
 };
 
 ui.start('#firebaseui-auth-container', uiConfig);
 
-function getUser() {
-    firebase.auth().onAuthStateChanged(function (user) {
-        if (user) {
-            //console.log("user is signed in");
-            db.collection("users")
-                .doc(user.uid)
-                .get()
-                .then(function (doc) {
-                    var n = doc.data().name;
-                    //console.log(n);
-                    $("#username").text(n);
-                })
-        } else {
-            console.log("no user is signed in");
-        }
-    })
-}
-getUser();
+

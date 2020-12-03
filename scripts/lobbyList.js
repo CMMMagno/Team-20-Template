@@ -16,6 +16,10 @@ function renderLobby(doc){
     btn.append('Players Needed: ', Players);
 
     list.appendChild(btn);
+
+    btn.addEventListener('click', function() {
+        location.replace('lobby.html')
+    })
 }
 
 db.collection('lobby').get().then((snapshot) => {
@@ -26,5 +30,14 @@ db.collection('lobby').get().then((snapshot) => {
 })
 
 
+function displayLobbyByFilter(filter){
+    db.collection('lobby').where('game', '==', filter)
+    .get()
+    .then(function(snap){
+        snap.forEach(function(doc){
+            renderLobby(doc)
+        })
+    })
+}
 
 

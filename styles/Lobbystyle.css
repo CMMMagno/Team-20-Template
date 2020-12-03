@@ -1,7 +1,7 @@
 body {
     min-height: 100vh;
     display: flex;
-    background-color: #133b5c;
+    background-color: #ebe7d9;
     align-items: center;
     justify-content: center;
     margin: 0px;
@@ -18,4 +18,16 @@ body {
         "Lobby";
     row-gap: 20px;
     padding: 10px;
+}
+
+/* Nav */
+.navbar {
+    grid-area: nav;
+    color: gray;
+    align-items: center;
+    height: 70px;
+}
+
+.bg {
+    background-color:#0E1A22;
 }
