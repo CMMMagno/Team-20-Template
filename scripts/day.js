@@ -67,35 +67,25 @@ function promptEvent() {
 }
 
 function confirmEventDay(dateClickInfo) {
+    date = dateClickInfo.dateStr;
     if (promptEvent()) {
         var eventTitle = prompt('Enter event title:')
-        calendar.addEvent({
-            title: eventTitle,
-            start: dateClickInfo.date,
-        });
         db.collection('event').add({
-            ID: index++,
             title: eventTitle,
-            start: date.getDate(),
+            start: date,
         });
     }
 }
 
 function confirmEventButton() {
-    var index = 0;
     if (promptEvent()) {
         var eventDate = prompt('Enter event date:');
         var date = new Date(eventDate + 'T00:00:00');
         var eventTitle = prompt('Enter event title:');
         if (!isNaN(date.valueOf())) {
-            calendar.addEvent({
-                title: eventTitle,
-                start: date.getDate(),
-            });
             db.collection('event').add({
-                ID: index++,
                 title: eventTitle,
-                start: date.getDate(),
+                start: date,
             });
         }
     }
