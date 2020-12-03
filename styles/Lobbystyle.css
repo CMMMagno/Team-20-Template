@@ -21,13 +21,39 @@ body {
 }
 
 /* Nav */
-.navbar {
+.nav {
+    height: 70px;
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: 2fr 0.9fr 1.5fr;
+    background-color: #0E1A22;
     grid-area: nav;
     color: gray;
     align-items: center;
-    height: 70px;
-}
-
-.bg {
-    background-color:#0E1A22;
-}
+    padding-left: 10px;
+  }
+  
+  .nav-options{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: flex-end;
+  }
+  
+  .nav-options>a {
+    text-align: end;
+    align-content: end;
+  }
+  
+  .nav-item {
+    text-align: center;
+  }
+  
+  .nav>a {
+    width: 80px;
+  }
+  
+  .nav>a>button {
+    background: transparent;
+    color: white;
+    border: none;
+  }
