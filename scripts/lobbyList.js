@@ -1,6 +1,6 @@
 const lobbyList = document.querySelector('#list');
 
-function renderLobby(doc){
+function renderLobby(doc) {
     let btn = document.createElement('button');
     let Name = document.createElement('h5');
     let Game = document.createElement('p');
@@ -17,7 +17,7 @@ function renderLobby(doc){
 
     list.appendChild(btn);
 
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', function () {
         location.replace('lobby.html')
     })
 }
@@ -30,14 +30,12 @@ db.collection('lobby').get().then((snapshot) => {
 })
 
 
-function displayLobbyByFilter(filter){
-    db.collection('lobby').where('game', '==', filter)
-    .get()
-    .then(function(snap){
-        snap.forEach(function(doc){
-            renderLobby(doc)
+function displayLobbyByFilter(filter) {
+    db.collection('lobby').where('Game', '==', filter)
+        .get()
+        .then(function (snap) {
+            snap.forEach(function (doc) {
+                renderLobby(doc)
+            })
         })
-    })
 }
-
-
