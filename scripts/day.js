@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     var calendarEl = document.getElementById('calendar');
+    var index = 0;
     var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
 
