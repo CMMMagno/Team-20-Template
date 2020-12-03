@@ -1,3 +1,9 @@
+// Back function of the nav
+function goBack() {
+    window.history.back()
+}
+
+// Calendar javascript
 document.addEventListener('DOMContentLoaded', function () {
     var calendarEl = document.getElementById('calendar');
     var index = 0;

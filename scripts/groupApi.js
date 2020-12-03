@@ -15,4 +15,4 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 var fb = firebase;
-const db = firebase.firestore();
+var db = firebase.firestore();

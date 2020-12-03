@@ -1,13 +1,14 @@
 var firebase = fb;
 var uid = null;
 firebase.auth().onAuthStateChanged(function (user) {
+  console.log(user);
   if (user) {
     // User is signed in.
     uid = user.uid;
   } else {
     // Redirect to login page
     uid = null;
-    window.location.replace("index.html");
+    window.location.replace("../index.html");
   }
 });
 

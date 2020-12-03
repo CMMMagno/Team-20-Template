@@ -30,5 +30,16 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
+//Footer
+function goAboutUs() {
+  window.location.href='aboutUs.html';
+}
+function goProfile() {
+  window.location.href='profile.html';
+}
+function goSignout() {
+  window.location.href='index.html';
+}
+
 
 

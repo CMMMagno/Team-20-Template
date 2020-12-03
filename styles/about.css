@@ -1,5 +1,5 @@
 body {
-    background-color: #133b5c;
+    background-color: #ebe7d9;
 }
 
 #index {
@@ -8,6 +8,29 @@ body {
     margin-bottom: 2rem;
     background-color: #e8e8e8;
     border-radius: 0.3rem;
+}
+
+/* Nav */
+nav {
+    grid-area: nav;
+}
+
+.navbar>button {
+    border: none;
+}
+
+.bg {
+    background-color: #0E1A22;
+}
+
+.nav-item {
+    text-align: center;
+}
+
+.navbar>a>button {
+    background: transparent;
+    border: transparent;
+    color: white;
 }
 
 @media (min-width: 576px) {

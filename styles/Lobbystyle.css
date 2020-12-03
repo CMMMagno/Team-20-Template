@@ -1,11 +1,11 @@
 body {
     min-height: 100vh;
     display: flex;
-    background-color: #133b5c;
+    background-color: #ebe7d9;
     align-items: center;
     justify-content: center;
     margin: 0px;
-    padding: 0px;
+    padding-top: 100px;
 }
 
 #container {
@@ -19,3 +19,41 @@ body {
     row-gap: 20px;
     padding: 10px;
 }
+
+/* Nav */
+.nav {
+    height: 70px;
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: 2fr 0.9fr 1.5fr;
+    background-color: #0E1A22;
+    grid-area: nav;
+    color: gray;
+    align-items: center;
+    padding-left: 10px;
+  }
+  
+  .nav-options{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: flex-end;
+  }
+  
+  .nav-options>a {
+    text-align: end;
+    align-content: end;
+  }
+  
+  .nav-item {
+    text-align: center;
+  }
+  
+  .nav>a {
+    width: 80px;
+  }
+  
+  .nav>a>button {
+    background: transparent;
+    color: white;
+    border: none;
+  }

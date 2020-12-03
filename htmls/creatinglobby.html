@@ -18,7 +18,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
 
     <!-- Optional styles and scripts of your own -->
-    <link rel="stylesheet" href="../styles/CreatingLobbystyle.css">
+    <link rel="stylesheet" href="../styles/createLobbystyle.css">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../images/VS.ico" />
@@ -31,7 +31,7 @@
 <body>
     <div id="container">
         <!-- Header Navigation Bar -->
-        <nav class="navbar navbar-expand navbar-dark bg-transparent">
+        <nav class="navbar navbar-expand navbar-dark bg fixed-top">
             <h1 class="navbar-brand" href="">
                 <i class="far fa-file-alt"></i> Creating Lobby
             </h1>
@@ -41,18 +41,20 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="LobbyList.html">Back</a>
+                        <a class="nav-link" href="lobbylist.html">
+                            <i class="fas fa-undo"></i> Back
+                        </a>
                     </li>
                 </ul>
             </div>
         </nav>
 
-        <form id="Lobby">
+        <form id="Lobby" action="lobby.html">
 
             <!-- Lobby Name -->
             <div class="Name">
                 <p>Lobby Name :</p>
-                <input type="textfield" name="name" placeholder="Name" required />
+                <input type="textfield" name="name" placeholder="Name" autocomplete="off" required />
             </div>
 
             <!-- Type of Game -->
@@ -66,20 +68,19 @@
                 </datalist>
             </div>
 
+            <div class="Code">
+                <p>Input Game Code :</p>
+                <input type="textfield" name="code" placeholder="ex: sfsd343Afdfsd" autocomplete="off" required>
+            </div>
+
             <!-- Player Count -->
             <div class="Amount">
                 <p>Player Limit :</p>
-                <input id="count" name=count type=number min=0 max=10 placeholder="1-10" required>
-                <button onclick="increment()">+</button>
-                <button onclick="decrement()">-</button>
+                <input id="count" name=count type=number min=0 max=100 placeholder="1-100" required>
             </div>
 
             <!-- Create button -->
-            <div class="Create">
-                <a href="Lobby.html">
-                    <button id="saveBtn">Create</button>
-                </a>
-            </div>
+            <button class="saveBtn">Create</button>
         </form>
     </div>
 
@@ -106,7 +107,7 @@
     <script src="../scripts/creatingLobby.js"></script>
 
     <!-- Check if User is Logged on -->
-    <script src="../scripts/userLogInStatus.js"></script>
+    <script src="../scripts/auth.js"></script>
 
 </body>
 

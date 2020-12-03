@@ -3,19 +3,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #133b5c;
-    padding: 30px;
+    background-color: #ebe7d9;
+}
+
+.bg {
+    background-color:#0E1A22;
 }
 
 input {
     border-radius: 5px;
-    border: none;
+    border: 1px solid #0E1A22;
 }
 
 button {
+    background-color: #fcdab7;
+    border: 1px solid #0E1A22;
     border-radius: 5px;
     box-shadow: none;
-    border: none;
 }
 
 button:hover {
@@ -25,15 +29,10 @@ button:hover {
 }
 
 #container {
-    height: 920px;
     width: 480px;
     display: grid;
-    grid-template-rows: 1fr 10fr;
-    grid-template-areas:
-    "nav"
-    "Lobby";
     padding: 10px;
-    color: #f4f4f2;
+    color: #0E1A22;
 }
 
 #Lobby {
@@ -43,6 +42,7 @@ button:hover {
     grid-template-areas:
     "Name"
     "Game"
+    "Code"
     "Amount"
     "Create";
     align-items: center;
@@ -57,24 +57,15 @@ button:hover {
     grid-area: Game;
 }
 
-.Amount {
-    grid-area: Amount;
+.Code {
+    grid-area: Code;
 }
 
-.Amount>button {
-    justify-content: center;
-    align-self: middle;
-    width: 30px;
-    height: 27px;
-    background-color: #fcdab7;
-
+.Amount {
+    grid-area: Amount;
 }
 
 .Create {
     grid-area: Create;
     margin: 0 auto;
-}
-
-.Create>a>button {
-    background-color: #fcdab7;
 }

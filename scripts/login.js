@@ -5,14 +5,30 @@ var uiConfig = {
             // User successfully signed in.
             // Return type determines whether we continue the redirect automatically
             // or whether we leave that to developer to handle.
+            var user = authResult.user;
+            if (authResult.additionalUserInfo.isNewUser) {
+                db.collection("users").doc(user.uid).set({
+                    name: user.displayName,
+                    email: user.email
+                }).then(function() {
+                    console.log("New user added to firestore");
+                    window.location.assign("homepage.html");
+                })
+                .catch(function (error) {
+                    console.log("Error adding new user: " + error);
+                });
+        } else {
             return true;
-        },
+        }
+        return false;
+    },
         uiShown: function () {
             // The widget is rendered.
             // Hide the loader.
             document.getElementById('loader').style.display = 'none';
         }
     },
+
     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
     signInFlow: 'popup',
     signInSuccessUrl: 'homepage.html',
@@ -28,7 +44,10 @@ var uiConfig = {
     // Terms of service url.
     tosUrl: 'https://cloud.google.com/terms/',
     // Privacy policy url.
-    privacyPolicyUrl: 'https://firebase.google.com/support/privacy'
+    privacyPolicyUrl: 'https://firebase.google.com/support/privacy',
+    accountChooserEnabled: false
 };
 
 ui.start('#firebaseui-auth-container', uiConfig);
+
+
