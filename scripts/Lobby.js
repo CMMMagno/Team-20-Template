@@ -6,14 +6,14 @@ function renderLobby(doc) {
     let Game = document.createElement('p');
     let Code = document.createElement('p');
     let Players = document.createElement('p');
-    let cross = document.createElement('div');
+    let cross = document.createElement('button');
 
     li.setAttribute('data-id', doc.id);
     Name.textContent = doc.data().Name;
     Game.textContent = doc.data().Game;
     Code.textContent = doc.data().Code;
     Players.textContent = doc.data().Players;
-    cross.textContent = 'x';
+    cross.textContent = 'close';
 
     li.append(Name);
     li.append('Game: ', Game);

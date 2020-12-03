@@ -8,7 +8,7 @@ firebase.auth().onAuthStateChanged(function (user) {
   } else {
     // Redirect to login page
     uid = null;
-    window.location.replace("index.html");
+    window.location.replace("../index.html");
   }
 });
 
