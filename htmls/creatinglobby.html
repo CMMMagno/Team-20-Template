@@ -31,23 +31,16 @@
 <body>
     <div id="container">
         <!-- Header Navigation Bar -->
-        <nav class="navbar navbar-expand navbar-dark bg fixed-top">
-            <h1 class="navbar-brand" href="">
-                <i class="far fa-file-alt"></i> Creating Lobby
+        <div class="nav fixed-top">
+            <a href="lobbylist.html">
+                <button>
+                    <i class="fas fa-undo"></i> Back
+                </button>
+            </a>
+            <h1 class="navbar-brand">
+                <i class="fas fa-users"></i> Creating Lobby
             </h1>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="lobbylist.html">
-                            <i class="fas fa-undo"></i> Back
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        </div>
 
         <form id="Lobby" action="lobby.html">
 
@@ -60,17 +53,17 @@
             <!-- Type of Game -->
             <div class="Game">
                 <p>Choose a Game :</p>
-                <input list="Games" name="game" placeholder="Pick a Game" required />
+                <input list="Games" name="game" placeholder="Pick a Game" autocomplete="off" required />
                 <datalist id="Games">
                     <option value="Jackbox">
-                    <option value="Skribblio">
+                    <option value="Skribbl.io">
                     <option value="Among Us">
                 </datalist>
             </div>
 
             <div class="Code">
-                <p>Input Game Code :</p>
-                <input type="textfield" name="code" placeholder="ex: sfsd343Afdfsd" autocomplete="off" required>
+                <p>Game Code or Web-Link:</p>
+                <input type="textfield" name="code" placeholder="Ex: WzcPW4skjRZL" autocomplete="off" required>
             </div>
 
             <!-- Player Count -->

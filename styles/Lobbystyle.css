@@ -8,6 +8,19 @@ body {
     padding-top: 100px;
 }
 
+button {
+  background-color: #fcdab7;
+  border: 1px solid #0E1A22;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+}
+
+p>button:hover {
+  box-shadow: 0px 1px 15px #839b97;
+  transform: translateY(1px);
+}
+
 #container {
     height: 920px;
     width: 480px;
@@ -25,7 +38,7 @@ body {
     height: 70px;
     grid-area: nav;
     display: grid;
-    grid-template-columns: 2fr 0.9fr 1.5fr;
+    grid-template-columns: 0.75fr 1fr;
     background-color: #0E1A22;
     grid-area: nav;
     color: gray;

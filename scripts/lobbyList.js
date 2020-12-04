@@ -29,13 +29,12 @@ db.collection('lobby').get().then((snapshot) => {
     })
 })
 
-
-function displayLobbyByFilter(filter) {
-    db.collection('lobby').where('Game', '==', filter)
-        .get()
-        .then(function (snap) {
-            snap.forEach(function (doc) {
-                renderLobby(doc)
-            })
-        })
-}
+//function displayLobbyByFilter(filter) {
+//    db.collection('lobby').where('Game', '==', filter)
+//        .get()
+//        .then(function (snap) {
+//            snap.forEach(function (doc) {
+//                renderLobby(doc)
+//            })
+//        })
+//}
