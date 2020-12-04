@@ -1,5 +1,17 @@
 body {
     background-color: #ebe7d9;
+    font-family: 'Merriweather', serif;
+
+}
+
+h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 200%;
+}
+.display-4{
+    font-family: 'DM Serif Display', serif;
+    font-weight: 600;
+    font-size: 400%;
 }
 
 /* Body Paragraph */
