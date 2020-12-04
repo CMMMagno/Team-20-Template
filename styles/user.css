@@ -7,6 +7,10 @@ body {
     padding-top: 100px;
 }
 
+h1 {
+    color: white;
+}
+
 /* Container */
 #container {
     height: 920px;
@@ -19,25 +23,41 @@ body {
     row-gap: 20px;
     padding: 10px;
 }
+
 /* Nav */
-nav {
+.nav {
+    height: 70px;
     grid-area: nav;
-}
-
-.navbar>button {
-    border: none;
-}
-
-.bg {
+    display: grid;
+    grid-template-columns: 0.75fr 1fr;
     background-color: #0E1A22;
+    grid-area: nav;
+    color: gray;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.nav-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: flex-end;
+}
+
+.nav-options>a {
+    text-align: end;
+    align-content: end;
 }
 
 .nav-item {
     text-align: center;
 }
 
-.navbar>a>button {
+.nav>a {
+    width: 80px;
+}
+
+.nav>a>button {
     background: transparent;
-    border: transparent;
     color: white;
+    border: none;
 }

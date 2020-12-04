@@ -85,8 +85,10 @@ function confirmEventButton() {
         if (!isNaN(date.valueOf())) {
             db.collection('event').add({
                 title: eventTitle,
-                start: date,
+                start: eventDate,
             });
+        } else {
+            alert('Invalid date; must be valid format (YYYY-MM-DD)');
         }
     }
 }

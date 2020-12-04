@@ -2,28 +2,28 @@ const lobbyList = document.querySelector('#Lobby-details');
 
 function renderLobby(doc) {
     let li = document.createElement('p');
-    let Name = document.createElement('h5');
+    let Name = document.createElement('h1');
     let Game = document.createElement('p');
     let Code = document.createElement('p');
     let Players = document.createElement('p');
-    let cross = document.createElement('button');
+    let close = document.createElement('button');
 
     li.setAttribute('data-id', doc.id);
     Name.textContent = doc.data().Name;
     Game.textContent = doc.data().Game;
     Code.textContent = doc.data().Code;
     Players.textContent = doc.data().Players;
-    cross.textContent = 'close';
+    close.textContent = 'close';
 
     li.append(Name);
     li.append('Game: ', Game);
-    li.append('Code', Code);
+    li.append('Code: ', Code);
     li.append('Players Needed: ', Players);
-    li.append(cross);
+    li.append(close);
 
     list.appendChild(li);
 
-    cross.addEventListener('click', (e) => {
+    close.addEventListener('click', (e) => {
         e.stopPropagation();
         let id = e.target.parentElement.getAttribute('data-id');
         db.collection('lobby').doc(id).delete().then(function(){

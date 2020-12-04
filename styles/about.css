@@ -16,6 +16,7 @@ h1 {
     font-size: 400%;
 }
 
+/* Body Paragraph */
 #index {
     border: 1px solid white;
     padding: 2rem 1rem;
@@ -26,26 +27,45 @@ h1 {
 }
 
 /* Nav */
-nav {
+.nav {
+    height: 70px;
     grid-area: nav;
-}
-
-.navbar>button {
-    border: none;
-}
-
-.bg {
+    display: grid;
+    grid-template-columns: 0.75fr 1fr;
     background-color: #0E1A22;
+    grid-area: nav;
+    color: gray;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.nav>h1 {
+    color: white;
+}
+
+.nav-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: flex-end;
+}
+
+.nav-options>a {
+    text-align: end;
+    align-content: end;
 }
 
 .nav-item {
     text-align: center;
 }
 
-.navbar>a>button {
+.nav>a {
+    width: 80px;
+}
+
+.nav>a>button {
     background: transparent;
-    border: transparent;
     color: white;
+    border: none;
 }
 
 @media (min-width: 576px) {

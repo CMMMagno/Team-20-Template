@@ -19,7 +19,7 @@
 
 
     <!-- Optional styles and scripts of your own -->
-    <link rel="stylesheet" href="../styles/LobbyListstyle.css">
+    <link rel="stylesheet" href="../styles/lobbyListstyle.css">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../images/VS.ico" />
@@ -32,45 +32,25 @@
 <body>
     <div id="container">
         <!-- Header Navigation Bar -->
-        <nav class="navbar navbar-lg navbar-dark bg fixed-top">
+        <div class="nav fixed-top">
             <a href="homepage.html">
                 <button>
                     <i class="fas fa-undo"></i> Back
                 </button>
             </a>
             <h1 class="navbar-brand">
-                <i class="fas fa-clipboard-list"></i> Lobby List
+                <i class="fas fa-clipboard-list"></i> Creating Lobby
             </h1>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="homepage.html">
-                            <i class="fas fa-home"></i> Home
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="About.html">
-                            <i class="fas fa-exclamation-circle"></i> About Us
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" onclick='logOut()' type="button">
-                            <i class="fas fa-sign-out-alt"></i> Sign Out
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        </div>
 
         <div class="Creating">
-            <a href="CreatingLobby.html">
+            <a href="creatinglobby.html">
                 <button>
                     <i class="fas fa-cog"></i> Create
                 </button>
             </a>
+
+            <!-- Wasnt able to implement Sort Option
             <div class="dropdown">
                 <button class="dropbtn">
                     <i class="fas fa-sort"></i> Sort
@@ -80,7 +60,8 @@
                         <a href="#" onclick="displayLobbyByFilter('Scribblio')">Scribblio</a>
                     </div>
                 </button>
-            </div>
+            </div> -->
+            
         </div>
         <div class="Lobbies">
             <ul id="list">
