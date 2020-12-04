@@ -87,6 +87,8 @@ function confirmEventButton() {
                 title: eventTitle,
                 start: date,
             });
+        } else {
+            alert('Invalid date; must be valid format (YYYY-MM-DD)');
         }
     }
 }
