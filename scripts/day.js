@@ -66,6 +66,8 @@ function promptEvent() {
     return (r ? r : alert('Cancelling event...'));
 }
 
+// confirmEventDay and confirmEventButton -> add() to database
+
 function confirmEventDay(dateClickInfo) {
     date = dateClickInfo.dateStr;
     if (promptEvent()) {
