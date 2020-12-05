@@ -1,5 +1,6 @@
 const lobbyList = document.querySelector('#Lobby-details');
 
+// Reads from the firestore
 function renderLobby(doc) {
     let li = document.createElement('p');
     let Name = document.createElement('h1');
@@ -23,6 +24,7 @@ function renderLobby(doc) {
 
     list.appendChild(li);
 
+    // Deletes the lobby
     close.addEventListener('click', (e) => {
         e.stopPropagation();
         let id = e.target.parentElement.getAttribute('data-id');
@@ -32,6 +34,7 @@ function renderLobby(doc) {
     })
 }
 
+// Displays the lobby info
 db.collection('lobby').get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
         renderLobby(doc);

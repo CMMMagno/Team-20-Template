@@ -1,6 +1,6 @@
-// Lobby Info
 const form = document.querySelector('#Lobby');
 
+// Writes
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   db.collection('lobby').add({

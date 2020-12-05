@@ -1,5 +1,6 @@
 const lobbyList = document.querySelector('#list');
 
+// Reads from firetstore
 function renderLobby(doc) {
     let btn = document.createElement('button');
     let Name = document.createElement('h5');
@@ -22,6 +23,7 @@ function renderLobby(doc) {
     })
 }
 
+// Reads the lobby collection and displays all the lobbies
 db.collection('lobby').get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
         renderLobby(doc);
@@ -29,6 +31,9 @@ db.collection('lobby').get().then((snapshot) => {
     })
 })
 
+// Tried adding a sort function, but everytime it tries to sort it would just 
+// addon the sorted list to the main list of everything.
+//
 //function displayLobbyByFilter(filter) {
 //    db.collection('lobby').where('Game', '==', filter)
 //        .get()

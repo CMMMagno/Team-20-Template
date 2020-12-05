@@ -8,6 +8,7 @@ h1 {
     font-family: 'DM Serif Display', serif;
     font-size: 200%;
 }
+
 .display-4{
     margin-top: 0;
     padding-top: 0;
@@ -77,28 +78,4 @@ h1 {
     #index {
         padding: 4rem 2rem;
     }
-}
-
-.mb-1 {
-    margin-bottom: 100em;
-}
-
-.pt-1 {
-    padding-top: 50em;
-}
-
-.pl-1 {
-    padding-left: 50em;
-}
-
-.pr-1 {
-    padding-right: 50em;
-}
-
-.p-1 {
-    padding: 50em;
-}
-
-.m-1 {
-    margin: 50em;
 }

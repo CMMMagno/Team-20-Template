@@ -1,5 +1,6 @@
 const lobbyList = document.querySelector('#list');
 
+// Reads from firestore
 function renderLobby(doc) {
     let btn = document.createElement('li');
     let Name = document.createElement('p');
@@ -12,6 +13,7 @@ function renderLobby(doc) {
     list.appendChild(btn);
 }
 
+// Reads the user collection and displays all the names
 db.collection('users').orderBy('name').get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
         renderLobby(doc);
